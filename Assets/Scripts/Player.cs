@@ -13,9 +13,16 @@ public class Player : MonoBehaviour
     public LayerMask solid;
     public float noChaoRaio;
     private float Axis;
-    public float Vel;
+   public float Vel;
    private bool estaAndando;
    public float jumpForce;
+   public bool gravidade1 ;
+   public bool gravidade2 ;
+
+  public  float gravitScale;
+
+  public float test;
+  
     
     // Start is called before the first frame update
     void Start()
@@ -24,24 +31,28 @@ public class Player : MonoBehaviour
        _tr = GetComponent<Transform>();
        _anim = GetComponent<Animator>();
        facingRight = true;
+       
     }
 
     // Update is called once per frame
     void Update()
     {
-        noChao = Physics2D.OverlapCircle(groundCheck.position, noChaoRaio, solid);
-        Axis = Input.GetAxisRaw("Horizontal");
-        estaAndando = Mathf.Abs(Axis) > 0;
+         noChao = Physics2D.OverlapCircle(groundCheck.position, noChaoRaio, solid);
+         Axis = Input.GetAxisRaw("Horizontal");
+         estaAndando = Mathf.Abs(Axis) > 0;
 
          PermiteFlip();
+         Jump();
+         ControledeFisica();
+         Walk();
+         Flip();
+
+         _rb.position = new Vector2(_rb.position.x, Mathf.Clamp(_rb.position.y, _rb.position.y, 3.16f));
+          gravitScale = _rb.gravityScale;
+
+          
     }
 
-    void FixedUpdate()
-    {
-        Walk();
-        Flip();
-        Jump();
-    }    
 
      private void OnDrawGizmosSelected() 
     {
@@ -85,6 +96,27 @@ public class Player : MonoBehaviour
         { 
             _rb.AddForce(_tr.up * jumpForce, ForceMode2D.Impulse);
         }
+        
+    }
+
+    public void ControledeFisica() 
+    { 
+          if(gravidade1) 
+          {
+              _rb.gravityScale = 2f;
+          }
+          else if (gravidade2) 
+          {
+              _rb.gravityScale = 3f;
+          }
+          else   
+          {
+                _rb.gravityScale =1;
+          } 
+
+        gravidade1 = _rb.velocity.y < 0f;
+        gravidade2 = _rb.velocity.y >= 0f && !Input.GetButton("Jump");
 
     }
+  
 }

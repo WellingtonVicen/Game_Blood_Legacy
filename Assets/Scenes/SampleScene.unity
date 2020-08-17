@@ -293,7 +293,10 @@ MonoBehaviour:
     m_Bits: 256
   noChaoRaio: 0.14
   Vel: 2
-  jumpForce: 2
+  jumpForce: 7
+  gravidade1: 0
+  gravidade2: 0
+  gravitScale: 0
 --- !u!95 &49456757
 Animator:
   serializedVersion: 3
