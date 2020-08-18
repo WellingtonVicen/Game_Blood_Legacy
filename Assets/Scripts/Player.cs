@@ -16,12 +16,12 @@ public class Player : MonoBehaviour
    public float Vel;
    private bool estaAndando;
    public float jumpForce;
-   public bool gravidade1 ;
-   public bool gravidade2 ;
+   private bool gravidade1 ;
+   private bool gravidade2 ;
+  private float gravitScale;
 
-  public  float gravitScale;
 
-  public float test;
+ 
   
     
     // Start is called before the first frame update
@@ -31,6 +31,7 @@ public class Player : MonoBehaviour
        _tr = GetComponent<Transform>();
        _anim = GetComponent<Animator>();
        facingRight = true;
+     
        
     }
 
@@ -46,6 +47,7 @@ public class Player : MonoBehaviour
          ControledeFisica();
          Walk();
          Flip();
+    
 
          _rb.position = new Vector2(_rb.position.x, Mathf.Clamp(_rb.position.y, _rb.position.y, 3.16f));
           gravitScale = _rb.gravityScale;
@@ -94,6 +96,7 @@ public class Player : MonoBehaviour
     {
         if(Input.GetButtonDown("Jump") && noChao) 
         { 
+            
             _rb.AddForce(_tr.up * jumpForce, ForceMode2D.Impulse);
         }
         
@@ -111,12 +114,14 @@ public class Player : MonoBehaviour
           }
           else   
           {
-                _rb.gravityScale =1;
+                _rb.gravityScale = 1;
           } 
 
         gravidade1 = _rb.velocity.y < 0f;
         gravidade2 = _rb.velocity.y >= 0f && !Input.GetButton("Jump");
 
     }
+
+   
   
 }
