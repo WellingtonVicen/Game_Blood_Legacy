@@ -20,9 +20,13 @@ public class Player : MonoBehaviour
    private bool gravidade2 ;
   private float gravitScale;
    
-
+     private CameraFollow cameraFollow;
+     public static Player Instance;
  
-  
+   private void Awake() 
+   {
+     NaoDestrua("Player");
+   }
     
     // Start is called before the first frame update
     void Start()
@@ -31,8 +35,6 @@ public class Player : MonoBehaviour
        _tr = GetComponent<Transform>();
        _anim = GetComponent<Animator>();
        facingRight = true;
-     
-       
     }
 
     // Update is called once per frame
@@ -123,5 +125,15 @@ public class Player : MonoBehaviour
     }
 
    
+    public void NaoDestrua(string tag)
+      { 
+          GameObject[] objs = GameObject.FindGameObjectsWithTag(tag);
+
+          if(objs.Length > 1) 
+           { 
+            Destroy(this.gameObject);
+          }
+         DontDestroyOnLoad(this.gameObject);
+      }
   
 }
