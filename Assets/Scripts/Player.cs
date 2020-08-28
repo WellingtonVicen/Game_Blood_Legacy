@@ -7,14 +7,14 @@ public class Player : MonoBehaviour
     private Rigidbody2D _rb;
     private Transform _tr;
     private Animator _anim;   
-    private bool facingRight;
+    public bool facingRight;
     public bool noChao;
     public Transform groundCheck;
     public LayerMask solid;
     public float noChaoRaio;
-    private float Axis;
+    public float Axis;
    public float Vel;
-   private bool estaAndando;
+   public bool estaAndando;
    public float jumpForce;
    private bool gravidade1 ;
    private bool gravidade2 ;
@@ -23,10 +23,7 @@ public class Player : MonoBehaviour
      private CameraFollow cameraFollow;
      public static Player Instance;
  
-   private void Awake() 
-   {
-     NaoDestrua("Player");
-   }
+  
     
     // Start is called before the first frame update
     void Start()
@@ -34,27 +31,38 @@ public class Player : MonoBehaviour
        _rb = GetComponent<Rigidbody2D>();
        _tr = GetComponent<Transform>();
        _anim = GetComponent<Animator>();
+       NaoDestrua("Player");
        facingRight = true;
+      
     }
 
     // Update is called once per frame
     void Update()
     {
-         noChao = Physics2D.OverlapCircle(groundCheck.position, noChaoRaio, solid);
-         Axis = Input.GetAxisRaw("Horizontal");
-         estaAndando = Mathf.Abs(Axis) > 0;
+        noChao = Physics2D.OverlapCircle(groundCheck.position, noChaoRaio, solid);
 
-         PermiteFlip();
-         Jump();
-         ControledeFisica();
-         Walk();
-         Flip();
-    
+          Axis = Input.GetAxis("Horizontal");
+          estaAndando = Axis != 0 ;
+          
+
+          PermiteFlip();
+          Jump();
+          ControledeFisica();
+           
 
          _rb.position = new Vector2(_rb.position.x, Mathf.Clamp(_rb.position.y, _rb.position.y, 3.16f));
           gravitScale = _rb.gravityScale;
 
           
+
+          
+    }
+
+     void FixedUpdate() 
+    {
+        Animations();
+        Walk();
+           
     }
 
 
@@ -74,26 +82,28 @@ public class Player : MonoBehaviour
         {
             _rb.velocity = new Vector2(-Vel, _rb.velocity.y);
         }
+
     }
 
-    public void Flip() 
-    { 
-       facingRight = !facingRight;
-        _tr.localScale = new Vector2(-_tr.localScale.x, _tr.localScale.y);
-    }
 
-    void PermiteFlip()
+    
+      void Flip(){ 
+          facingRight = !facingRight;
+          _tr.localScale = new Vector2(-_tr.localScale.x, _tr.localScale.y);
+      }
+
+       void PermiteFlip()
     {
-        if(Axis > 0 && !facingRight)
+        if(Axis> 0 && !facingRight)
         {
             Flip();
         }
-        else if (Axis< 0 && facingRight)
+        else if (Axis<0 && facingRight)
         {
             Flip();
         }
-    }
 
+    }
     public void Jump()
     {
         if(Input.GetButtonDown("Jump") && noChao) 
@@ -136,4 +146,11 @@ public class Player : MonoBehaviour
          DontDestroyOnLoad(this.gameObject);
       }
   
+     void Animations()
+    { 
+       _anim.SetBool("Walk", estaAndando);
+       _anim.SetFloat("Vertical", _rb.velocity.y);
+       _anim.SetBool("Jump", !noChao);
+     
+    }
 }

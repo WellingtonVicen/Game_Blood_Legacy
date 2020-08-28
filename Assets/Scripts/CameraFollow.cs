@@ -16,7 +16,7 @@ public class CameraFollow : MonoBehaviour
  [SerializeField]
 private float yMin;
 
-private Transform target;
+public Transform target;
 
   private Player player;
 
