@@ -29,7 +29,7 @@ public Transform target;
     // Start is called before the first frame update
     void Start()
     {
-        target = GameObject.Find("Player").transform;
+       // target = GameObject.Find("Player").transform;
 
        
     }
