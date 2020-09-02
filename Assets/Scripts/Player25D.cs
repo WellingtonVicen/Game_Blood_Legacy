@@ -11,6 +11,8 @@ public class Player25D : MonoBehaviour
   public float noChaoRaio;
   public float jumpForce;
   public bool estaAndando;
+  private bool praTrasE;
+  private bool praTrasD;
   public bool facingRight;
   public bool noChao;
 
@@ -60,13 +62,13 @@ public class Player25D : MonoBehaviour
        Axis = Input.GetAxis("Horizontal");
        estaAndando = Axis != 0;
 
-       //PermiteFlip();
+        praTrasE = Axis < 0 && facingRight;
+        praTrasD = Axis > 0 && !facingRight;
+
        Jump();
        ControleDeFisica();
        HandleRotation();
        
-
-
     }
 
     void FixedUpdate() 
@@ -75,6 +77,7 @@ public class Player25D : MonoBehaviour
        Walk();
        Animations();
        HandlePos();
+       Tras();
       
     }
 
@@ -83,7 +86,13 @@ public class Player25D : MonoBehaviour
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
         target.localPosition = ray.GetPoint(valorPoint);
-          chest.LookAt(target.localPosition);
+
+        if(target.localPosition.y <= 4f &&  target.localPosition.y >= -2.5f) 
+        { 
+            chest.LookAt(target.localPosition);
+        }
+         
+          print(target.localPosition);
 
          chest.rotation = chest.rotation * Quaternion.Euler(offset);
     }
@@ -115,7 +124,7 @@ public class Player25D : MonoBehaviour
  
         transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 15);
           
-         Debug.Log(targetRotation);
+         //Debug.Log(targetRotation);
 
          if(targetRotation.y < 0.5f )
          { 
@@ -145,28 +154,19 @@ public class Player25D : MonoBehaviour
          
     }
 
-    void Flip()
+    void Tras() 
     { 
-        facingRight = !facingRight;
-         _tr.localScale = new Vector3(-_tr.localScale.x, _tr.localScale.y, -_tr.localScale.z);
-    } 
+        if(praTrasD)
+        { 
+             rb.velocity = new Vector2(Vel,rb.velocity.y);
+        }
+        else if (praTrasE)
+        { 
+           rb.velocity = new Vector2(-Vel,rb.velocity.y);
+        }
+    }
 
   
-
-
-    
-    void PermiteFlip() 
-    { 
-        if(Axis > 0 && !facingRight)
-        {
-            Flip();
-        }
-        else if(Axis < 0 && facingRight) 
-        { 
-            Flip();
-        }
-
-    }
 
       private void OnDrawGizmosSelected()
       {
@@ -206,6 +206,8 @@ public class Player25D : MonoBehaviour
       { 
           animator.SetBool("Walk", estaAndando);
           animator.SetBool("Jump", !noChao);
+          animator.SetBool("WalkBack", praTrasE || praTrasD);
+          animator.SetBool("JumpBack", praTrasE && !noChao || praTrasD && !noChao);
       }
 
     
