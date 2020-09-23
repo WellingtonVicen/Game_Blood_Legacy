@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class Player25D : MonoBehaviour
 {
+    private const float V = 0.5882102f;
     public float Axis;
     public float Vel;
     public float noChaoRaio;
@@ -22,6 +23,7 @@ public class Player25D : MonoBehaviour
     public Transform groundCheckTransform;
     public LayerMask solid;
     public Transform targetTransform;
+    private CapsuleCollider capsule;
 
 
     private Animator animator;
@@ -44,17 +46,27 @@ public class Player25D : MonoBehaviour
     public int qtosPulos;
 
     public bool possuiHabilPulo;
+    public float crouched;
+    public bool crouch;
 
+
+
+    private void Awake()
+    {
+        NaoDestrua("Player");
+    }
 
     void Start()
     {
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody>();
         _tr = GetComponent<Transform>();
+        capsule = GetComponent<CapsuleCollider>();
         facingRight = true;
         chest = animator.GetBoneTransform(HumanBodyBones.Chest);
         slide = false;
-       
+
+
     }
 
 
@@ -84,6 +96,7 @@ public class Player25D : MonoBehaviour
         Animations();
         HandlePos();
         Tras();
+        Crouch();
 
     }
 
@@ -98,7 +111,7 @@ public class Player25D : MonoBehaviour
             chest.LookAt(target.localPosition);
         }
 
-        print(target.localPosition);
+        //print(target.localPosition);
 
         chest.rotation = chest.rotation * Quaternion.Euler(offset);
     }
@@ -115,9 +128,6 @@ public class Player25D : MonoBehaviour
             lookP.z = transform.position.z;
             lookPos = lookP;
         }
-
-
-
     }
 
     void HandleRotation()
@@ -170,8 +180,6 @@ public class Player25D : MonoBehaviour
         }
     }
 
-
-
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.cyan;
@@ -181,14 +189,15 @@ public class Player25D : MonoBehaviour
 
     public void Jump()
     {
-        if (Input.GetButtonDown("Jump") && noChao)
+        if (Input.GetButtonDown("Jump") && noChao && !crouch)
         {
             rb.AddForce(_tr.up * jumpForce, ForceMode.Impulse);
             qtosPulos++;
         }
-        else if (Input.GetButtonDown("Jump") && !noChao && qtosPulos <= 1 && possuiHabilPulo)
+        else if (Input.GetButtonDown("Jump") && !noChao && qtosPulos <= 1 && possuiHabilPulo && !crouch)
         {
             qtosPulos++;
+            rb.velocity = new Vector2(rb.velocity.x, 0);
             rb.AddForce(_tr.up * jumpForce, ForceMode.Impulse);
 
         }
@@ -196,14 +205,8 @@ public class Player25D : MonoBehaviour
         {
             qtosPulos = 0;
         }
-        
+
     }
-
-
-
-
-
-
 
     public void ControleDeFisica()
     {
@@ -231,16 +234,17 @@ public class Player25D : MonoBehaviour
         animator.SetBool("WalkBack", praTrasE || praTrasD);
         animator.SetBool("JumpBack", praTrasE && !noChao || praTrasD && !noChao);
         animator.SetBool("Slide", slide);
+        animator.SetBool("Crouch", crouch);
     }
 
     void Slide()
     {
-        if (Input.GetKeyDown(KeyCode.C) && facingRight && !slide)
+        if (Input.GetKeyDown(KeyCode.C) && facingRight && !slide && !crouch)
         {
             rb.AddForce(new Vector2(slideForce, 0), ForceMode.Impulse);
             slide = true;
         }
-        else if (Input.GetKeyDown(KeyCode.C) && !facingRight && !slide)
+        else if (Input.GetKeyDown(KeyCode.C) && !facingRight && !slide && !crouch)
         {
             rb.AddForce(new Vector2(-slideForce, 0), ForceMode.Impulse);
             slide = true;
@@ -263,14 +267,33 @@ public class Player25D : MonoBehaviour
 
     }
 
+    public void NaoDestrua(string tag)
+    {
+        GameObject[] objs = GameObject.FindGameObjectsWithTag(tag);
 
+        if (objs.Length > 1)
+        {
+            Destroy(this.gameObject);
+        }
+        DontDestroyOnLoad(this.gameObject);
 
+    }
 
+    void Crouch()
+    {
+        crouched = Input.GetAxis("Vertical");
+        crouch = crouched < 0;
 
-
-
-
-
-
+        if (crouch)
+        {
+            capsule.height = 1.5f;
+              capsule.center = new Vector3(7.204121e-18f,0.7241328f,0.03175694f);
+        }
+        else
+        {
+           capsule.height = 1.792002f;
+           capsule.center = new Vector3(7.204121e-18f,0.82f,0.03175694f);
+        }
+    }
 
 }
