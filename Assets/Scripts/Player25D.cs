@@ -37,15 +37,13 @@ public class Player25D : MonoBehaviour
     public Transform chest;
     Transform BD;
     Transform hips;
-
     public static Vector3 mousePosition;
-
-
     public float valorPoint;
-
     Vector3 lookPos;
-
     private float contador;
+    public int qtosPulos;
+
+    public bool possuiHabilPulo;
 
 
     void Start()
@@ -56,6 +54,7 @@ public class Player25D : MonoBehaviour
         facingRight = true;
         chest = animator.GetBoneTransform(HumanBodyBones.Chest);
         slide = false;
+       
     }
 
 
@@ -185,8 +184,26 @@ public class Player25D : MonoBehaviour
         if (Input.GetButtonDown("Jump") && noChao)
         {
             rb.AddForce(_tr.up * jumpForce, ForceMode.Impulse);
+            qtosPulos++;
         }
+        else if (Input.GetButtonDown("Jump") && !noChao && qtosPulos <= 1 && possuiHabilPulo)
+        {
+            qtosPulos++;
+            rb.AddForce(_tr.up * jumpForce, ForceMode.Impulse);
+
+        }
+        else if (noChao && qtosPulos >= 2 || noChao && qtosPulos >= 1 && !possuiHabilPulo)
+        {
+            qtosPulos = 0;
+        }
+        
     }
+
+
+
+
+
+
 
     public void ControleDeFisica()
     {
@@ -218,12 +235,12 @@ public class Player25D : MonoBehaviour
 
     void Slide()
     {
-        if (Input.GetKeyDown(KeyCode.C) && facingRight  && !slide)
+        if (Input.GetKeyDown(KeyCode.C) && facingRight && !slide)
         {
             rb.AddForce(new Vector2(slideForce, 0), ForceMode.Impulse);
             slide = true;
         }
-        else if (Input.GetKeyDown(KeyCode.C) && !facingRight && !slide )
+        else if (Input.GetKeyDown(KeyCode.C) && !facingRight && !slide)
         {
             rb.AddForce(new Vector2(-slideForce, 0), ForceMode.Impulse);
             slide = true;

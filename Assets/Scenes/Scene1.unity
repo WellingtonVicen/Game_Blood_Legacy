@@ -742,6 +742,8 @@ MonoBehaviour:
   estaAndando: 0
   facingRight: 0
   noChao: 0
+  slide: 0
+  slideForce: 10
   groundCheckTransform: {fileID: 645696872}
   solid:
     serializedVersion: 2
@@ -751,6 +753,8 @@ MonoBehaviour:
   offset: {x: 0, y: 0, z: 0}
   chest: {fileID: 1538665026}
   valorPoint: 7.43
+  qtosPulos: 0
+  possuiHabilPulo: 0
 --- !u!95 &746069500
 Animator:
   serializedVersion: 3
