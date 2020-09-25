@@ -37,6 +37,8 @@ public class Player25D : MonoBehaviour
     public Vector3 offset;
 
     public Transform chest;
+    public Transform hand;
+    public Transform lowerArm;
     Transform BD;
     Transform hips;
     public static Vector3 mousePosition;
@@ -48,6 +50,8 @@ public class Player25D : MonoBehaviour
     public bool possuiHabilPulo;
     public float crouched;
     public bool crouch;
+    public GameObject pistol;
+    public Transform parentPistol;
 
 
 
@@ -64,7 +68,11 @@ public class Player25D : MonoBehaviour
         capsule = GetComponent<CapsuleCollider>();
         facingRight = true;
         chest = animator.GetBoneTransform(HumanBodyBones.Chest);
+        hand = animator.GetBoneTransform(HumanBodyBones.RightUpperArm);
         slide = false;
+        pistol.SetActive(true);
+        pistol.transform.position = parentPistol.position;
+        pistol.transform.SetParent(parentPistol);
 
 
     }
@@ -94,10 +102,10 @@ public class Player25D : MonoBehaviour
         // rb.velocity = new Vector3(inputMovement * walkSpeed, rb.velocity.y,0 ); 2.5D
         Walk();
         Animations();
-        HandlePos();
+        HandleAimPos();
         Tras();
         Crouch();
-
+        
     }
 
     private void LateUpdate()
@@ -106,17 +114,15 @@ public class Player25D : MonoBehaviour
 
         target.localPosition = ray.GetPoint(valorPoint);
 
-        if (target.localPosition.y <= 4f && target.localPosition.y >= -2.5f)
-        {
-            chest.LookAt(target.localPosition);
-        }
-
-        //print(target.localPosition);
+            chest.LookAt(new Vector2(target.position.x, target.position.y));
+            //hand.LookAt(target.localPosition);
+           // print(target.localPosition);
 
         chest.rotation = chest.rotation * Quaternion.Euler(offset);
+        hand.rotation = hand.rotation * Quaternion.Euler(offset); 
     }
 
-    void HandlePos()
+    void HandleAimPos()
     {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
@@ -128,6 +134,7 @@ public class Player25D : MonoBehaviour
             lookP.z = transform.position.z;
             lookPos = lookP;
         }
+           
     }
 
     void HandleRotation()
@@ -137,11 +144,8 @@ public class Player25D : MonoBehaviour
         Quaternion targetRotation = Quaternion.LookRotation(directionToLook);
 
         //Debug.Log(lookPos.x + " " + transform.position.x);
-
         transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 15);
-
         //Debug.Log(targetRotation);
-
         if (targetRotation.y < 0.5f)
         {
             facingRight = false;
@@ -150,9 +154,9 @@ public class Player25D : MonoBehaviour
         {
             facingRight = true;
         }
-
-
     }
+
+    
 
 
     void Walk()
