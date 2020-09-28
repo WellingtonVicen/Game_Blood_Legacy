@@ -52,6 +52,12 @@ public class Player25D : MonoBehaviour
     public bool crouch;
     public GameObject pistol;
     public Transform parentPistol;
+    public GameObject espada;
+    public Transform parentEspada;
+
+    public bool estaEmPunhoArma;
+    public bool estaEmPunhoEspada;
+
 
 
 
@@ -70,7 +76,9 @@ public class Player25D : MonoBehaviour
         chest = animator.GetBoneTransform(HumanBodyBones.Chest);
         hand = animator.GetBoneTransform(HumanBodyBones.RightUpperArm);
         slide = false;
+        espada.SetActive(false);
         pistol.SetActive(true);
+        estaEmPunhoArma = true;
         pistol.transform.position = parentPistol.position;
         pistol.transform.SetParent(parentPistol);
 
@@ -94,7 +102,7 @@ public class Player25D : MonoBehaviour
         HandleRotation();
         controleSlide();
         Slide();
-
+        TrocaArma();
     }
 
     void FixedUpdate()
@@ -105,7 +113,7 @@ public class Player25D : MonoBehaviour
         HandleAimPos();
         Tras();
         Crouch();
-        
+
     }
 
     private void LateUpdate()
@@ -114,12 +122,12 @@ public class Player25D : MonoBehaviour
 
         target.localPosition = ray.GetPoint(valorPoint);
 
-            chest.LookAt(new Vector2(target.position.x, target.position.y));
-            //hand.LookAt(target.localPosition);
-           // print(target.localPosition);
+        chest.LookAt(new Vector2(target.position.x, target.position.y));
+        //hand.LookAt(target.localPosition);
+        // print(target.localPosition);
 
         chest.rotation = chest.rotation * Quaternion.Euler(offset);
-        hand.rotation = hand.rotation * Quaternion.Euler(offset); 
+        hand.rotation = hand.rotation * Quaternion.Euler(offset);
     }
 
     void HandleAimPos()
@@ -134,7 +142,7 @@ public class Player25D : MonoBehaviour
             lookP.z = transform.position.z;
             lookPos = lookP;
         }
-           
+
     }
 
     void HandleRotation()
@@ -156,7 +164,7 @@ public class Player25D : MonoBehaviour
         }
     }
 
-    
+
 
 
     void Walk()
@@ -239,6 +247,7 @@ public class Player25D : MonoBehaviour
         animator.SetBool("JumpBack", praTrasE && !noChao || praTrasD && !noChao);
         animator.SetBool("Slide", slide);
         animator.SetBool("Crouch", crouch);
+        animator.SetBool("Espada", estaEmPunhoEspada);
     }
 
     void Slide()
@@ -291,13 +300,37 @@ public class Player25D : MonoBehaviour
         if (crouch)
         {
             capsule.height = 1.5f;
-              capsule.center = new Vector3(7.204121e-18f,0.7241328f,0.03175694f);
+            capsule.center = new Vector3(7.204121e-18f, 0.7241328f, 0.03175694f);
         }
         else
         {
-           capsule.height = 1.792002f;
-           capsule.center = new Vector3(7.204121e-18f,0.82f,0.03175694f);
+            capsule.height = 1.792002f;
+            capsule.center = new Vector3(7.204121e-18f, 0.82f, 0.03175694f);
         }
+    }
+
+    void TrocaArma()
+    {
+        if (Input.GetKeyDown(KeyCode.F) && estaEmPunhoArma)
+        {
+            pistol.SetActive(false);
+            espada.SetActive(true);
+            estaEmPunhoArma = !estaEmPunhoArma;
+            estaEmPunhoEspada = true;
+            espada.transform.position = parentEspada.position;
+            espada.transform.SetParent(parentEspada);
+        }
+        else if (Input.GetKeyDown(KeyCode.F) && estaEmPunhoEspada)
+        {
+            espada.SetActive(false);
+            pistol.SetActive(true);
+            estaEmPunhoEspada = !estaEmPunhoEspada;
+            estaEmPunhoArma = true;
+            pistol.transform.position = parentPistol.position;
+            pistol.transform.SetParent(parentPistol);
+
+        }
+
     }
 
 }
