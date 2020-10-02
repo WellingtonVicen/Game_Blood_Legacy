@@ -23,11 +23,11 @@ public class Player25D : MonoBehaviour
     public Transform groundCheckTransform;
     public LayerMask solid;
     public Transform targetTransform;
-    private CapsuleCollider capsule;
+    //private CapsuleCollider capsule;
 
 
     private Animator animator;
-    private Rigidbody rb;
+    private Rigidbody2D rb;
 
     private bool gravidade1;
     private bool gravidade2;
@@ -69,9 +69,9 @@ public class Player25D : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
-        rb = GetComponent<Rigidbody>();
+        rb = GetComponent<Rigidbody2D>();
         _tr = GetComponent<Transform>();
-        capsule = GetComponent<CapsuleCollider>();
+        //capsule = GetComponent<CapsuleCollider>();
         facingRight = true;
         chest = animator.GetBoneTransform(HumanBodyBones.Chest);
         hand = animator.GetBoneTransform(HumanBodyBones.RightUpperArm);
@@ -89,7 +89,7 @@ public class Player25D : MonoBehaviour
     void Update()
     {
 
-        noChao = Physics.CheckSphere(groundCheckTransform.position, noChaoRaio, solid, QueryTriggerInteraction.Ignore);
+        noChao = Physics2D.OverlapCircle(groundCheckTransform.position, noChaoRaio, solid);
 
         Axis = Input.GetAxis("Horizontal");
         estaAndando = Axis != 0;
@@ -97,7 +97,9 @@ public class Player25D : MonoBehaviour
         praTrasE = Axis < 0 && facingRight;
         praTrasD = Axis > 0 && !facingRight;
 
+        Walk();
         Jump();
+        Animations();
         ControleDeFisica();
         HandleRotation();
         controleSlide();
@@ -108,8 +110,6 @@ public class Player25D : MonoBehaviour
     void FixedUpdate()
     {
         // rb.velocity = new Vector3(inputMovement * walkSpeed, rb.velocity.y,0 ); 2.5D
-        Walk();
-        Animations();
         HandleAimPos();
         Tras();
         Crouch();
@@ -134,7 +134,6 @@ public class Player25D : MonoBehaviour
     {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-
         RaycastHit hit;
         if (Physics.Raycast(ray, out hit, Mathf.Infinity))
         {
@@ -152,7 +151,10 @@ public class Player25D : MonoBehaviour
         Quaternion targetRotation = Quaternion.LookRotation(directionToLook);
 
         //Debug.Log(lookPos.x + " " + transform.position.x);
-        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 15);
+
+        //transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 15);
+        transform.rotation = targetRotation;
+
         //Debug.Log(targetRotation);
         if (targetRotation.y < 0.5f)
         {
@@ -203,14 +205,14 @@ public class Player25D : MonoBehaviour
     {
         if (Input.GetButtonDown("Jump") && noChao && !crouch)
         {
-            rb.AddForce(_tr.up * jumpForce, ForceMode.Impulse);
+            rb.AddForce(_tr.up * jumpForce, ForceMode2D.Impulse);
             qtosPulos++;
         }
         else if (Input.GetButtonDown("Jump") && !noChao && qtosPulos <= 1 && possuiHabilPulo && !crouch)
         {
             qtosPulos++;
             rb.velocity = new Vector2(rb.velocity.x, 0);
-            rb.AddForce(_tr.up * jumpForce, ForceMode.Impulse);
+            rb.AddForce(_tr.up * jumpForce, ForceMode2D.Impulse);
 
         }
         else if (noChao && qtosPulos >= 2 || noChao && qtosPulos >= 1 && !possuiHabilPulo)
@@ -224,15 +226,18 @@ public class Player25D : MonoBehaviour
     {
         if (gravidade1)
         {
-            Physics.gravity = new Vector3(0, -15, 0);
+            //Physics2D.gravity = new Vector3(0, -15, 0);
+            rb.gravityScale = 1.53f;
         }
         else if (gravidade2)
         {
-            Physics.gravity = new Vector3(0, -30, 0);
+            //Physics2D.gravity = new Vector3(0, -30, 0);
+            rb.gravityScale = 3.06f;
         }
         else
         {
-            Physics.gravity = new Vector3(0, -9.81f, 0);
+            //Physics2D.gravity = new Vector3(0, -9.81f, 0);
+            rb.gravityScale = 1;
         }
 
         gravidade1 = rb.velocity.y < 0f;
@@ -254,12 +259,12 @@ public class Player25D : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.C) && facingRight && !slide && !crouch)
         {
-            rb.AddForce(new Vector2(slideForce, 0), ForceMode.Impulse);
+            rb.AddForce(new Vector2(slideForce, 0), ForceMode2D.Impulse);
             slide = true;
         }
         else if (Input.GetKeyDown(KeyCode.C) && !facingRight && !slide && !crouch)
         {
-            rb.AddForce(new Vector2(-slideForce, 0), ForceMode.Impulse);
+            rb.AddForce(new Vector2(-slideForce, 0), ForceMode2D.Impulse);
             slide = true;
         }
 
@@ -288,6 +293,7 @@ public class Player25D : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+
         DontDestroyOnLoad(this.gameObject);
 
     }
@@ -299,13 +305,13 @@ public class Player25D : MonoBehaviour
 
         if (crouch)
         {
-            capsule.height = 1.5f;
-            capsule.center = new Vector3(7.204121e-18f, 0.7241328f, 0.03175694f);
+            //capsule.height = 1.5f;
+            //capsule.center = new Vector3(7.204121e-18f, 0.7241328f, 0.03175694f);
         }
         else
         {
-            capsule.height = 1.792002f;
-            capsule.center = new Vector3(7.204121e-18f, 0.82f, 0.03175694f);
+            //capsule.height = 1.792002f;
+            //capsule.center = new Vector3(7.204121e-18f, 0.82f, 0.03175694f);
         }
     }
 
