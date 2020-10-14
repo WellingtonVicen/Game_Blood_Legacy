@@ -9,6 +9,63 @@ EditorBuildSettings:
     path: Assets/Scenes/Scene1.unity
     guid: 3861bd667611e9c45988923983b78a34
   - enabled: 1
-    path: Assets/Scenes/Scene1 1.unity
-    guid: d2aefa5a1e7ceff47b679552a48f1ae7
+    path: Assets/Scenes/E1.unity
+    guid: 11d05598f61c8e944b2f403ae74081f4
+  - enabled: 1
+    path: Assets/Scenes/E2.unity
+    guid: 91abbebd6ad159747a51e33444972a75
+  - enabled: 1
+    path: Assets/Scenes/E3.unity
+    guid: 865160f6f877ef34d9e0db8b9bef9595
+  - enabled: 1
+    path: Assets/Scenes/U1.unity
+    guid: e520b2f1401f4984597fa17441e3eb97
+  - enabled: 1
+    path: Assets/Scenes/U2.unity
+    guid: fff363947b9409a4f942bf76eeba8dfe
+  - enabled: 1
+    path: Assets/Scenes/U6.unity
+    guid: e49a30539262ed24883a10e5439d9851
+  - enabled: 1
+    path: Assets/Scenes/U3.unity
+    guid: a02677f20f06568429b0db7c71860ff3
+  - enabled: 1
+    path: Assets/Scenes/U4.unity
+    guid: 8fc53afa3ee3a4c4c97b27d6a25eaf07
+  - enabled: 1
+    path: Assets/Scenes/U5.unity
+    guid: 4410f262997fe824aae2be38c30fb909
+  - enabled: 1
+    path: Assets/Scenes/U7.unity
+    guid: 248962e8986d2254486511a49977a3e9
+  - enabled: 1
+    path: Assets/Scenes/U8.unity
+    guid: 4c3f45b449785534b9351f29baf81be6
+  - enabled: 1
+    path: Assets/Scenes/U9.unity
+    guid: 82f2d4a77998fa849bec90d91451cd0d
+  - enabled: 1
+    path: Assets/Scenes/U10.unity
+    guid: 288c263a86c846545b5df49d67ecf2b7
+  - enabled: 1
+    path: Assets/Scenes/U11.unity
+    guid: 5475514ce4a11f4429032bfc17d3c661
+  - enabled: 1
+    path: Assets/Scenes/UN1.unity
+    guid: 2291c98a1d3f9d4448dea98ea5741c71
+  - enabled: 1
+    path: Assets/Scenes/UR1.unity
+    guid: 40869d3227976154a8c67ddb33d9224b
+  - enabled: 1
+    path: Assets/Scenes/US.unity
+    guid: 515106ba78ad87e40947f76f5422d8eb
+  - enabled: 1
+    path: Assets/Scenes/E4.unity
+    guid: 84d8d1f87c9c469478f901295e646a25
+  - enabled: 1
+    path: Assets/Scenes/ER1.unity
+    guid: 28285a162cad1c74a902ee3295d9142e
+  - enabled: 1
+    path: Assets/Scenes/S.unity
+    guid: 2ca16537a3dc1f44b83b3f8031c58594
   m_configObjects: {}

@@ -6,6 +6,13 @@ TagManager:
   tags:
   - Camera
   - VirtualCamera
+  - ColiderPlayer
+  - Portal
+  - Mouse
+  - MouseTarget
+  - Platarforma
+  - PortalS
+  - PortalC
   layers:
   - Default
   - TransparentFX
@@ -17,7 +24,7 @@ TagManager:
   - 
   - Solid
   - MouseTarget
-  - 
+  - plat
   - 
   - 
   - 

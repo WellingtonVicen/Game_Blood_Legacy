@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 
@@ -22,6 +23,7 @@ public class Player25D : MonoBehaviour
     private Transform _tr;
     public Transform groundCheckTransform;
     public LayerMask solid;
+    public LayerMask plat;
     public Transform targetTransform;
     //private CapsuleCollider capsule;
 
@@ -49,7 +51,7 @@ public class Player25D : MonoBehaviour
 
     public bool possuiHabilPulo;
     public float crouched;
-    public bool crouch;
+    public static bool crouch;
     public GameObject pistol;
     public Transform parentPistol;
     public GameObject espada;
@@ -58,12 +60,19 @@ public class Player25D : MonoBehaviour
     public bool estaEmPunhoArma;
     public bool estaEmPunhoEspada;
 
+    private string sceneName;
+    public Vector3 startPosition;
+
+    public static bool naPlatarmorma;
+
+    public  static bool possuiChave;
+
 
 
 
     private void Awake()
     {
-        NaoDestrua("Player");
+
     }
 
     void Start()
@@ -81,6 +90,8 @@ public class Player25D : MonoBehaviour
         estaEmPunhoArma = true;
         pistol.transform.position = parentPistol.position;
         pistol.transform.SetParent(parentPistol);
+        //possuiChave = true;    para poder acessar a salas Vermelhas
+
 
 
     }
@@ -90,6 +101,7 @@ public class Player25D : MonoBehaviour
     {
 
         noChao = Physics2D.OverlapCircle(groundCheckTransform.position, noChaoRaio, solid);
+        // naPlatarmorma = Physics2D.OverlapCircle(groundCheckTransform.position,noChaoRaio);
 
         Axis = Input.GetAxis("Horizontal");
         estaAndando = Axis != 0;
@@ -285,19 +297,6 @@ public class Player25D : MonoBehaviour
 
     }
 
-    public void NaoDestrua(string tag)
-    {
-        GameObject[] objs = GameObject.FindGameObjectsWithTag(tag);
-
-        if (objs.Length > 1)
-        {
-            Destroy(this.gameObject);
-        }
-
-        DontDestroyOnLoad(this.gameObject);
-
-    }
-
     void Crouch()
     {
         crouched = Input.GetAxis("Vertical");
@@ -314,6 +313,9 @@ public class Player25D : MonoBehaviour
             //capsule.center = new Vector3(7.204121e-18f, 0.82f, 0.03175694f);
         }
     }
+
+
+
 
     void TrocaArma()
     {
@@ -338,5 +340,59 @@ public class Player25D : MonoBehaviour
         }
 
     }
+
+
+
+    void OnTriggerEnter2D(Collider2D collider)
+    {
+        if (collider.CompareTag("Portal"))
+        {
+            var newPortal = collider.GetComponent<LoadScene>();
+            SceneManager.LoadScene(newPortal.sceneName);
+            startPosition = newPortal.newPostionPortal;
+            gameObject.transform.position = startPosition;
+
+        }
+        else if (collider.CompareTag("PortalS") && rb.velocity.y > 0f)
+        {
+            var newPortal = collider.GetComponent<LoadScene>();
+            SceneManager.LoadScene(newPortal.sceneName);
+            startPosition = newPortal.newPostionPortal;
+            gameObject.transform.position = startPosition;
+            qtosPulos = 0;
+
+        }
+        else if (collider.CompareTag("PortalC") && possuiChave)
+        {
+            var newPortal = collider.GetComponent<LoadScene>();
+            SceneManager.LoadScene(newPortal.sceneName);
+            startPosition = newPortal.newPostionPortal;
+            gameObject.transform.position = startPosition;
+        }
+
+
+
+    }
+
+    void OnTriggerStay2D(Collider2D collider)
+    {
+        if (collider.CompareTag("Platarforma"))
+        {
+            naPlatarmorma = true;
+        }
+
+    }
+
+    void OnTriggerExit2D(Collider2D collider)
+    {
+        if (collider.CompareTag("Platarforma"))
+        {
+            naPlatarmorma = !naPlatarmorma;
+        }
+
+    }
+
+
+
 
 }
