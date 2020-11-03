@@ -8,29 +8,30 @@ using UnityEngine.SceneManagement;
 public class Player25D : MonoBehaviour
 {
     private const float V = 0.5882102f;
-    public float Axis;
-    public float Vel;
-    public float noChaoRaio;
-    public float jumpForce;
-    public bool estaAndando;
+    float Axis;
+    [Header("Setings")]
+    public PlayerType playerType;
+    [Range(0, 10)] public float sensitivity;
+    [HideInInspector] public float noChaoRaio;
+    [Range(0, 15)] public float jumpForce;
+    [HideInInspector] public bool estaAndando;
     private bool praTrasE;
     private bool praTrasD;
-    public bool facingRight;
-    public bool noChao;
-    public bool slide;
-    public float slideForce;
-
+    [HideInInspector] public bool facingRight;
+    [HideInInspector] public bool noChao;
+    [HideInInspector] public bool slide;
+    [Range(0, 10)] public float slideForce;
+    [Range(0, 15)] public float valorPoint;
+    public bool possuiHabilPulo;
     private Transform _tr;
+    [Header("Reference")]
     public Transform groundCheckTransform;
     public LayerMask solid;
-    public LayerMask plat;
+    public LayerMask plataforma;
     public Transform targetTransform;
     //private CapsuleCollider capsule;
-
-
     private Animator animator;
     private Rigidbody2D rb;
-
     private bool gravidade1;
     private bool gravidade2;
     private float gravitScale;
@@ -44,36 +45,19 @@ public class Player25D : MonoBehaviour
     Transform BD;
     Transform hips;
     public static Vector3 mousePosition;
-    public float valorPoint;
     Vector3 lookPos;
     private float contador;
-    public int qtosPulos;
-
-    public bool possuiHabilPulo;
+    [HideInInspector] public int qtosPulos;
     public float crouched;
     public static bool crouch;
-    public GameObject pistol;
-    public Transform parentPistol;
-    public GameObject espada;
-    public Transform parentEspada;
-
-    public bool estaEmPunhoArma;
-    public bool estaEmPunhoEspada;
-
     private string sceneName;
-    public Vector3 startPosition;
-
+    [HideInInspector] public Vector3 startPosition;
     public static bool naPlatarmorma;
+    public static bool possuiChave;
+    public GerennciadorArmas gerennciadorArmas;
 
-    public  static bool possuiChave;
-
-
-
-
-    private void Awake()
-    {
-
-    }
+    public static Player25D instace;
+    public static Player25D Instace { get { return Instace; } }
 
     void Start()
     {
@@ -85,12 +69,9 @@ public class Player25D : MonoBehaviour
         chest = animator.GetBoneTransform(HumanBodyBones.Chest);
         hand = animator.GetBoneTransform(HumanBodyBones.RightUpperArm);
         slide = false;
-        espada.SetActive(false);
-        pistol.SetActive(true);
-        estaEmPunhoArma = true;
-        pistol.transform.position = parentPistol.position;
-        pistol.transform.SetParent(parentPistol);
+
         //possuiChave = true;    para poder acessar a salas Vermelhas
+        gerennciadorArmas.StartWepon();
 
 
 
@@ -102,10 +83,8 @@ public class Player25D : MonoBehaviour
 
         noChao = Physics2D.OverlapCircle(groundCheckTransform.position, noChaoRaio, solid);
         // naPlatarmorma = Physics2D.OverlapCircle(groundCheckTransform.position,noChaoRaio);
-
         Axis = Input.GetAxis("Horizontal");
         estaAndando = Axis != 0;
-
         praTrasE = Axis < 0 && facingRight;
         praTrasD = Axis > 0 && !facingRight;
 
@@ -116,7 +95,11 @@ public class Player25D : MonoBehaviour
         HandleRotation();
         controleSlide();
         Slide();
-        TrocaArma();
+        RequestSwitch();
+        RequestAttacks();
+        RequestReload();
+
+
     }
 
     void FixedUpdate()
@@ -136,15 +119,36 @@ public class Player25D : MonoBehaviour
 
         chest.LookAt(new Vector2(target.position.x, target.position.y));
         //hand.LookAt(target.localPosition);
-        // print(target.localPosition);
+        //print(target.localPosition);
+        Pistol.instace.projectileExit.LookAt(new Vector2(target.position.x, target.position.y));
 
         chest.rotation = chest.rotation * Quaternion.Euler(offset);
         hand.rotation = hand.rotation * Quaternion.Euler(offset);
     }
 
+
+    void RequestSwitch()
+    {
+
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            gerennciadorArmas.WeaponSwitch();
+        }
+
+    }
+
+    void RequestReload()
+    {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            gerennciadorArmas.RequestReload();
+        }
+    }
+
     void HandleAimPos()
     {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
 
         RaycastHit hit;
         if (Physics.Raycast(ray, out hit, Mathf.Infinity))
@@ -185,11 +189,11 @@ public class Player25D : MonoBehaviour
     {
         if (estaAndando && facingRight && Axis > 0)
         {
-            rb.velocity = new Vector2(Vel, rb.velocity.y);
+            rb.velocity = new Vector2(sensitivity, rb.velocity.y);
         }
         else if (estaAndando && !facingRight && Axis < 0)
         {
-            rb.velocity = new Vector2(-Vel, rb.velocity.y);
+            rb.velocity = new Vector2(-sensitivity, rb.velocity.y);
         }
 
     }
@@ -198,11 +202,11 @@ public class Player25D : MonoBehaviour
     {
         if (praTrasD)
         {
-            rb.velocity = new Vector2(Vel, rb.velocity.y);
+            rb.velocity = new Vector2(sensitivity, rb.velocity.y);
         }
         else if (praTrasE)
         {
-            rb.velocity = new Vector2(-Vel, rb.velocity.y);
+            rb.velocity = new Vector2(-sensitivity, rb.velocity.y);
         }
     }
 
@@ -256,7 +260,7 @@ public class Player25D : MonoBehaviour
         gravidade2 = rb.velocity.y >= 0f && !Input.GetButton("Jump");
     }
 
-    void Animations()
+    public void Animations()
     {
         animator.SetBool("Walk", estaAndando);
         animator.SetBool("Jump", !noChao);
@@ -264,7 +268,8 @@ public class Player25D : MonoBehaviour
         animator.SetBool("JumpBack", praTrasE && !noChao || praTrasD && !noChao);
         animator.SetBool("Slide", slide);
         animator.SetBool("Crouch", crouch);
-        animator.SetBool("Espada", estaEmPunhoEspada);
+        animator.SetBool("Espada", gerennciadorArmas.estaEmPunhoSword);
+        animator.SetBool("Slash", Sword.instace.isSword);
     }
 
     void Slide()
@@ -297,51 +302,31 @@ public class Player25D : MonoBehaviour
 
     }
 
+
     void Crouch()
     {
         crouched = Input.GetAxis("Vertical");
         crouch = crouched < 0;
 
-        if (crouch)
-        {
-            //capsule.height = 1.5f;
-            //capsule.center = new Vector3(7.204121e-18f, 0.7241328f, 0.03175694f);
-        }
-        else
-        {
-            //capsule.height = 1.792002f;
-            //capsule.center = new Vector3(7.204121e-18f, 0.82f, 0.03175694f);
-        }
     }
 
-
-
-
-    void TrocaArma()
+    public void RequestAttacks()
     {
-        if (Input.GetKeyDown(KeyCode.F) && estaEmPunhoArma)
+        if (Input.GetMouseButtonDown(0))
         {
-            pistol.SetActive(false);
-            espada.SetActive(true);
-            estaEmPunhoArma = !estaEmPunhoArma;
-            estaEmPunhoEspada = true;
-            espada.transform.position = parentEspada.position;
-            espada.transform.SetParent(parentEspada);
-        }
-        else if (Input.GetKeyDown(KeyCode.F) && estaEmPunhoEspada)
-        {
-            espada.SetActive(false);
-            pistol.SetActive(true);
-            estaEmPunhoEspada = !estaEmPunhoEspada;
-            estaEmPunhoArma = true;
-            pistol.transform.position = parentPistol.position;
-            pistol.transform.SetParent(parentPistol);
+            if (gerennciadorArmas.estaEmPunhoPistol)
+            {
+
+                gerennciadorArmas.RequestFire();
+            }
+            else if (gerennciadorArmas.estaEmPunhoSword)
+            {
+                gerennciadorArmas.RequestSlash();
+            }
 
         }
 
     }
-
-
 
     void OnTriggerEnter2D(Collider2D collider)
     {
