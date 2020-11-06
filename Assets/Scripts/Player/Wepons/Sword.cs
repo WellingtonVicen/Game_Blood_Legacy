@@ -7,10 +7,12 @@ public class Sword : MonoBehaviour
 
     [Header("Settings")]
     public bool isSword;
+    public int damage = 3;
     [Header("References")]
     public GameObject slashEffect;
     public Transform slashEffectTrasnform;
     private float contSlash;
+
 
     public static Sword instace;
     public static Sword Instace { get { return instace; } }
@@ -48,6 +50,7 @@ public class Sword : MonoBehaviour
             isSword = true;
         }
     }
+
 
 
 

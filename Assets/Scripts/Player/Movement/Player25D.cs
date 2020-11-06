@@ -148,8 +148,7 @@ public class Player25D : MonoBehaviour
     void HandleAimPos()
     {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
-
+        
         RaycastHit hit;
         if (Physics.Raycast(ray, out hit, Mathf.Infinity))
         {

@@ -7,9 +7,11 @@ public class Projectile : MonoBehaviour
 
     [Header("Settings")]
     public float speed = 10f;
-    Rigidbody rb;
-    private Vector3 speedProjectile =  Vector3.zero;
-    private  Vector3 posDest;
+    Rigidbody2D rb;
+    private Vector3 speedProjectile = Vector3.zero;
+    private Vector3 posDest;
+
+    public int damage = 10;
     public static Projectile instace;
     public static Projectile Instace { get { return Instace; } }
 
@@ -22,7 +24,7 @@ public class Projectile : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
+        rb = GetComponent<Rigidbody2D>();
         posDest = GerennciadorArmas.instance.player.target.localPosition;
 
 
@@ -31,8 +33,17 @@ public class Projectile : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = Vector3.SmoothDamp(transform.position, posDest , ref speedProjectile, 1 / speed);
-        Destroy(this.gameObject, 0.3f);
+        Movement();
+        Destroy(this.gameObject, 1f);
 
     }
+
+    void Movement()
+    {
+
+        transform.position = Vector3.SmoothDamp(transform.position, posDest, ref speedProjectile, 1 / speed);
+    }
+
+
+
 }

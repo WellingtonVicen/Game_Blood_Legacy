@@ -13,6 +13,9 @@ TagManager:
   - Platarforma
   - PortalS
   - PortalC
+  - Enemy
+  - Projectile
+  - Blade
   layers:
   - Default
   - TransparentFX
@@ -25,7 +28,7 @@ TagManager:
   - Solid
   - MouseTarget
   - plat
-  - 
+  - Player
   - 
   - 
   - 

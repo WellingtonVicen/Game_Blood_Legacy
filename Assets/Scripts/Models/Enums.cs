@@ -5,8 +5,14 @@
 }
 
 public enum WeponsType
-{ 
+{
     PISTOL,
     SWORD,
 
+}
+
+public enum EnemysType
+{
+    SWORD,
+    PISTOL,
 }

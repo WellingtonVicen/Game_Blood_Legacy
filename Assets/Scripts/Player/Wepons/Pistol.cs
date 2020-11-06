@@ -39,7 +39,7 @@ public class Pistol : MonoBehaviour
         {
             Instantiate(projectile, projectileExit.position, Quaternion.identity);
             numeroBalas--;
-            print(numeroBalas);
+            //print(numeroBalas);
         }
 
     }
@@ -115,7 +115,7 @@ public class Pistol : MonoBehaviour
                 if (balasReload >= 5)
                 {
                     print("Recarege 5");
-                    numeroBalas += balasReload;
+                    numeroBalas += 5;
                     balasReload -= balasReload;
                     break;
                 }
