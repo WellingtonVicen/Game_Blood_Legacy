@@ -5,7 +5,7 @@ using UnityEngine;
 public class SwordBehaviour : EnemyBehaviour
 {
     Animator animator;
-    
+
     void Start()
     {
         StartStatus();
@@ -18,6 +18,7 @@ public class SwordBehaviour : EnemyBehaviour
 
     void Update()
     {
+        Verifications();
         Move();
         Animations();
     }
@@ -27,6 +28,7 @@ public class SwordBehaviour : EnemyBehaviour
         animator.SetBool("Walk", isWalk);
         animator.SetBool("Attack", readyAttack);
         animator.SetBool("Impact", impact);
+        animator.SetBool("Dead", isDead);
     }
 
 

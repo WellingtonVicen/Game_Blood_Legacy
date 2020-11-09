@@ -6,9 +6,9 @@ public class Projectile : MonoBehaviour
 {
 
     [Header("Settings")]
-    public float speed = 10f;
+    public float speed = 20f;
     Rigidbody2D rb;
-    private Vector3 speedProjectile = Vector3.zero;
+    private Vector3 speedProjectile = Vector3.up;
     private Vector3 posDest;
 
     public int damage = 10;
@@ -40,7 +40,6 @@ public class Projectile : MonoBehaviour
 
     void Movement()
     {
-
         transform.position = Vector3.SmoothDamp(transform.position, posDest, ref speedProjectile, 1 / speed);
     }
 

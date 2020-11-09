@@ -69,12 +69,8 @@ public class Player25D : MonoBehaviour
         chest = animator.GetBoneTransform(HumanBodyBones.Chest);
         hand = animator.GetBoneTransform(HumanBodyBones.RightUpperArm);
         slide = false;
-
         //possuiChave = true;    para poder acessar a salas Vermelhas
         gerennciadorArmas.StartWepon();
-
-
-
     }
 
 
