@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Pistol : MonoBehaviour
 {
@@ -16,16 +17,19 @@ public class Pistol : MonoBehaviour
     public static Pistol instace;
     public static Pistol Instace { get { return instace; } }
 
+    [Header("UI")]
+    public Text bulletsText;
+    public Text bullestsToReloadText;
+
     // Start is called before the first frame update
 
     void Awake()
     {
         instace = this;
+        bulletsText.text = numeroBalas.ToString();
+        bullestsToReloadText.text = balasReload.ToString();
     }
-    void Start()
-    {
 
-    }
 
     // Update is called once per frame
     void Update()
@@ -39,6 +43,7 @@ public class Pistol : MonoBehaviour
         {
             Instantiate(projectile, projectileExit.position, Quaternion.identity);
             numeroBalas--;
+            bulletsText.text = numeroBalas.ToString();
             //print(numeroBalas);
         }
 
@@ -49,110 +54,131 @@ public class Pistol : MonoBehaviour
         switch (numeroBalas)
         {
             case 7:
-                print("Pistola Totalmente Carregada");
+            //
                 break;
             case 6:
                 if (balasReload >= 1)
                 {
-                    print("Recarege 1");
                     balasReload--;
                     numeroBalas++;
+                    bulletsText.text = numeroBalas.ToString();
+                    bullestsToReloadText.text = balasReload.ToString();
                     break;
                 }
                 else if (balasReload > 0)
                 {
                     numeroBalas += balasReload;
                     balasReload -= balasReload;
+                    bulletsText.text = numeroBalas.ToString();
+                    bullestsToReloadText.text = balasReload.ToString();
                     break;
                 }
                 break;
             case 5:
                 if (balasReload >= 2)
                 {
-                    print("Recarege 2");
                     balasReload -= 2;
                     numeroBalas += 2;
+                    bulletsText.text = numeroBalas.ToString();
+                    bullestsToReloadText.text = balasReload.ToString();
                     break;
                 }
                 else if (balasReload > 0)
                 {
                     numeroBalas += balasReload;
                     balasReload -= balasReload;
+                    bulletsText.text = numeroBalas.ToString();
+                    bullestsToReloadText.text = balasReload.ToString();
                     break;
                 }
                 break;
             case 4:
                 if (balasReload >= 3)
                 {
-                    print("Recarege 3");
                     balasReload -= 3;
                     numeroBalas += 3;
+                    bulletsText.text = numeroBalas.ToString();
+                    bullestsToReloadText.text = balasReload.ToString();
                     break;
                 }
                 else if (balasReload > 0)
                 {
                     numeroBalas += balasReload;
                     balasReload -= balasReload;
+                    bulletsText.text = numeroBalas.ToString();
+                    bullestsToReloadText.text = balasReload.ToString();
                     break;
                 }
                 break;
             case 3:
                 if (balasReload >= 4)
                 {
-                    print("Recarege 4");
                     balasReload -= 4;
                     numeroBalas += 4;
+                    bulletsText.text = numeroBalas.ToString();
+                    bullestsToReloadText.text = balasReload.ToString();
                     break;
                 }
                 else if (balasReload > 0)
                 {
                     numeroBalas += balasReload;
                     balasReload -= balasReload;
+                    bulletsText.text = numeroBalas.ToString();
+                    bullestsToReloadText.text = balasReload.ToString();
                     break;
                 }
                 break;
             case 2:
                 if (balasReload >= 5)
                 {
-                    print("Recarege 5");
                     numeroBalas += 5;
                     balasReload -= balasReload;
+                    bulletsText.text = numeroBalas.ToString();
+                    bullestsToReloadText.text = balasReload.ToString();
                     break;
                 }
                 else if (balasReload > 0)
                 {
                     numeroBalas += balasReload;
                     balasReload -= balasReload;
+                    bulletsText.text = numeroBalas.ToString();
+                    bullestsToReloadText.text = balasReload.ToString();
                     break;
                 }
                 break;
             case 1:
                 if (balasReload >= 6)
                 {
-                    print("Recarege 6");
                     balasReload -= 6;
                     numeroBalas += 6;
+                    bulletsText.text = numeroBalas.ToString();
+                    bullestsToReloadText.text = balasReload.ToString();
                     break;
                 }
                 else if (balasReload > 0)
                 {
                     numeroBalas += balasReload;
                     balasReload -= balasReload;
+                    bulletsText.text = numeroBalas.ToString();
+                    bullestsToReloadText.text = balasReload.ToString();
                     break;
                 }
                 break;
             case 0:
                 if (balasReload >= 7)
                 {
-                    print("Recarege 7");
                     balasReload -= 7;
                     numeroBalas += 7;
+                    bulletsText.text = numeroBalas.ToString();
+                    bullestsToReloadText.text = balasReload.ToString();
                     break;
                 }
                 else if (balasReload > 0)
                 {
                     balasReload -= balasReload;
                     numeroBalas += balasReload;
+                    bulletsText.text = numeroBalas.ToString();
+                    bullestsToReloadText.text = balasReload.ToString();
                     break;
                 }
 

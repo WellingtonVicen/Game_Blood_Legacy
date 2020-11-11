@@ -6,13 +6,16 @@ public class SwordBehaviour : EnemyBehaviour
 {
     Animator animator;
 
+    private void Awake()
+    {
+        playerTransform = GameObject.Find("Player3D").transform;
+    }
+
     void Start()
     {
         StartStatus();
 
-        playerTransform = GameObject.Find("Player3D").transform;
         animator = GetComponent<Animator>();
-
 
     }
 

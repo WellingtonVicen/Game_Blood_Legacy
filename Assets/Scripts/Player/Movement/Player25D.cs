@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
-
+using UnityEngine.UI;
 
 public class Player25D : MonoBehaviour
 {
     private const float V = 0.5882102f;
     float Axis;
     [Header("Setings")]
+    public float currentLife;
     public PlayerType playerType;
     [Range(0, 10)] public float sensitivity;
     [HideInInspector] public float noChaoRaio;
@@ -54,7 +54,10 @@ public class Player25D : MonoBehaviour
     [HideInInspector] public Vector3 startPosition;
     public static bool naPlatarmorma;
     public static bool possuiChave;
+    public Transform targetBullets;
     public GerennciadorArmas gerennciadorArmas;
+    [Header("UI")]
+    public Image healthBar;
 
     public static Player25D instace;
     public static Player25D Instace { get { return Instace; } }
@@ -144,7 +147,7 @@ public class Player25D : MonoBehaviour
     void HandleAimPos()
     {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        
+
         RaycastHit hit;
         if (Physics.Raycast(ray, out hit, Mathf.Infinity))
         {
@@ -323,6 +326,23 @@ public class Player25D : MonoBehaviour
 
     }
 
+    public void TakeDamage(float damage)
+    {
+        currentLife -= damage;
+        healthBar.fillAmount -= damage/100;
+        if (currentLife <= 0)
+        {
+            print("Morreu");
+
+        }
+    }
+
+    void Dead()
+    {
+
+        Destroy(this.gameObject, 1.5f);
+    }
+
     void OnTriggerEnter2D(Collider2D collider)
     {
         if (collider.CompareTag("Portal"))
@@ -349,7 +369,10 @@ public class Player25D : MonoBehaviour
             startPosition = newPortal.newPostionPortal;
             gameObject.transform.position = startPosition;
         }
-
+        else if (collider.CompareTag("Bullet"))
+        {
+            TakeDamage(Bullet.instace.damage);
+        }
 
 
     }
@@ -371,8 +394,6 @@ public class Player25D : MonoBehaviour
         }
 
     }
-
-
 
 
 }

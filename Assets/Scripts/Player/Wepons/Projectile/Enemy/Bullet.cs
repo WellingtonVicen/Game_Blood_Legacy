@@ -7,34 +7,35 @@ public class Bullet : MonoBehaviour
 
     [Header("Settings")]
     public float speed = 0.5f;
-    public float damage = 10f;
+    public float damage = 0.1f;
     Vector3 direction;
-    private Vector3 speedProjectile = Vector3.up;
+    private Vector3 speedProjectile = Vector3.zero;
 
+    [Header("Singleton")]
+    public static Bullet instace;
+    public static Bullet Instace { get { return Instace; } }
 
-
-    // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-
-
+        instace = this;
     }
 
     // Update is called once per frame
     void Update()
     {
-        direction = GerennciadorArmas.instance.player.transform.localPosition;
         Movement();
         Destroy(this.gameObject, 1f);
     }
     void FixedUpdate()
     {
+        direction = GerennciadorArmas.instance.player.targetBullets.position;
 
     }
 
     void Movement()
     {
+
+        // transform.Translate(direction * speed * Time.deltaTime);
         transform.localPosition = Vector3.SmoothDamp(transform.position, direction, ref speedProjectile, 1 / speed);
-        transform.Translate(direction * speed * Time.deltaTime);
     }
 }

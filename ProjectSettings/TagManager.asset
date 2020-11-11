@@ -17,6 +17,8 @@ TagManager:
   - Projectile
   - Blade
   - Bullet
+  - Canvas
+  - Pistol
   layers:
   - Default
   - TransparentFX

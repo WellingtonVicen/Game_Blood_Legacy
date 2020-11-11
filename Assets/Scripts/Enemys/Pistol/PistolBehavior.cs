@@ -18,18 +18,23 @@ public class PistolBehavior : EnemyBehaviour
 
 
 
+    void Awake()
+    {
+        playerTransform = GameObject.Find("Player3D").transform;
+        StartStatus();
+       
+    }
 
     // Start is called before the first frame update
     void Start()
     {
-        StartStatus();
-        StartWeapon();
-
-        playerTransform = GameObject.Find("Player3D").transform;
-
+        //StartStatus();
+        //StartWeapon(); 
         animator = GetComponent<Animator>();
         chest = animator.GetBoneTransform(HumanBodyBones.Chest);
     }
+
+
 
     // Update is called once per frame
     void Update()
@@ -65,11 +70,11 @@ public class PistolBehavior : EnemyBehaviour
 
     void FollowPlayer()
     {
-        if (readyAttack && !isWhip)
+        if (readyAttack && !isWhip && !isDead)
         {
             chest.LookAt(new Vector2(playerTransform.position.x, playerTransform.position.y));
             fireDelay += Time.deltaTime;
-            InvokeRepeating("Fire", 0.1f, 2f);
+            InvokeRepeating("Fire", 0.1f, 3f);
         }
         else
         {
