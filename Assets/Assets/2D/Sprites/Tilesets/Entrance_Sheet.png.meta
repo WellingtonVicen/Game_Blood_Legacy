@@ -1,0 +1,3043 @@
+fileFormatVersion: 2
+guid: 9b61d63916530c547888750969c5cb10
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2522630332532722097
+    second: Entrance_Sheet_0
+  - first:
+      213: 4517003192906815239
+    second: Entrance_Sheet_1
+  - first:
+      213: 4602927967715543419
+    second: Entrance_Sheet_2
+  - first:
+      213: 1255232063951052392
+    second: Entrance_Sheet_3
+  - first:
+      213: -7169865297570232186
+    second: Entrance_Sheet_4
+  - first:
+      213: 8126557185522204445
+    second: Entrance_Sheet_5
+  - first:
+      213: 3353638644906675236
+    second: Entrance_Sheet_6
+  - first:
+      213: -9145863478439543076
+    second: Entrance_Sheet_7
+  - first:
+      213: 8658323218442817008
+    second: Entrance_Sheet_8
+  - first:
+      213: 7142990018353077145
+    second: Entrance_Sheet_9
+  - first:
+      213: -4061628290574584759
+    second: Entrance_Sheet_10
+  - first:
+      213: -5553555369182120800
+    second: Entrance_Sheet_11
+  - first:
+      213: 5423079607389953383
+    second: Entrance_Sheet_12
+  - first:
+      213: -4987426404627251144
+    second: Entrance_Sheet_13
+  - first:
+      213: 5109846871206749720
+    second: Entrance_Sheet_14
+  - first:
+      213: -1894879459478206456
+    second: Entrance_Sheet_15
+  - first:
+      213: -6763322400322427138
+    second: Entrance_Sheet_16
+  - first:
+      213: 6186545485420819802
+    second: Entrance_Sheet_17
+  - first:
+      213: -5274756722535549965
+    second: Entrance_Sheet_18
+  - first:
+      213: -4665355290707731050
+    second: Entrance_Sheet_19
+  - first:
+      213: -90449191226491744
+    second: Entrance_Sheet_20
+  - first:
+      213: -6698731854075948539
+    second: Entrance_Sheet_21
+  - first:
+      213: -4246257403894833749
+    second: Entrance_Sheet_22
+  - first:
+      213: 8489126550556992790
+    second: Entrance_Sheet_23
+  - first:
+      213: -595772203383414393
+    second: Entrance_Sheet_24
+  - first:
+      213: 746800963292301245
+    second: Entrance_Sheet_25
+  - first:
+      213: 2517729473304259948
+    second: Entrance_Sheet_26
+  - first:
+      213: -1587933439160595330
+    second: Entrance_Sheet_27
+  - first:
+      213: -2502460737444348577
+    second: Entrance_Sheet_28
+  - first:
+      213: 1161085305240073951
+    second: Entrance_Sheet_29
+  - first:
+      213: 7953005181916239130
+    second: Entrance_Sheet_30
+  - first:
+      213: -6729394092736112107
+    second: Entrance_Sheet_31
+  - first:
+      213: -7549380997483789818
+    second: Entrance_Sheet_32
+  - first:
+      213: -6223760692323579769
+    second: Entrance_Sheet_33
+  - first:
+      213: -3551562093287164032
+    second: Entrance_Sheet_34
+  - first:
+      213: 7325122629593309429
+    second: Entrance_Sheet_35
+  - first:
+      213: 2975842958586197711
+    second: Entrance_Sheet_36
+  - first:
+      213: -8746624171243281370
+    second: Entrance_Sheet_37
+  - first:
+      213: 4355543212976301591
+    second: Entrance_Sheet_38
+  - first:
+      213: 1637142166773705884
+    second: Entrance_Sheet_39
+  - first:
+      213: 1996099423656129171
+    second: Entrance_Sheet_40
+  - first:
+      213: 8501677270810924626
+    second: Entrance_Sheet_41
+  - first:
+      213: -5568042353088134675
+    second: Entrance_Sheet_42
+  - first:
+      213: 8434792220708504042
+    second: Entrance_Sheet_43
+  - first:
+      213: -169549541476450277
+    second: Entrance_Sheet_44
+  - first:
+      213: -3077759780017363063
+    second: Entrance_Sheet_45
+  - first:
+      213: -7401236025076330631
+    second: Entrance_Sheet_46
+  - first:
+      213: 8620906696962801089
+    second: Entrance_Sheet_47
+  - first:
+      213: 7955008175062709365
+    second: Entrance_Sheet_48
+  - first:
+      213: -4267264970495437537
+    second: Entrance_Sheet_49
+  - first:
+      213: -2428222545104695714
+    second: Entrance_Sheet_50
+  - first:
+      213: 2838805842223909042
+    second: Entrance_Sheet_51
+  - first:
+      213: 2863459050597442225
+    second: Entrance_Sheet_52
+  - first:
+      213: -8153377124118834654
+    second: Entrance_Sheet_53
+  - first:
+      213: -8147229493763363887
+    second: Entrance_Sheet_54
+  - first:
+      213: 8045825979203724133
+    second: Entrance_Sheet_55
+  - first:
+      213: -4616061572272409937
+    second: Entrance_Sheet_56
+  - first:
+      213: 4808293427057393206
+    second: Entrance_Sheet_57
+  - first:
+      213: -4671706872780902036
+    second: Entrance_Sheet_58
+  - first:
+      213: 8843843543427275683
+    second: Entrance_Sheet_59
+  - first:
+      213: -5088740384324057792
+    second: Entrance_Sheet_60
+  - first:
+      213: -5143317015149964295
+    second: Entrance_Sheet_61
+  - first:
+      213: 2567306356714414450
+    second: Entrance_Sheet_62
+  - first:
+      213: 6192002834381192508
+    second: Entrance_Sheet_63
+  - first:
+      213: -1372230503369729478
+    second: Entrance_Sheet_64
+  - first:
+      213: -4165213201073945899
+    second: Entrance_Sheet_65
+  - first:
+      213: 4686344371912330213
+    second: Entrance_Sheet_66
+  - first:
+      213: 5595744623262886616
+    second: Entrance_Sheet_67
+  - first:
+      213: 1994228632010045676
+    second: Entrance_Sheet_68
+  - first:
+      213: -7827266778844838783
+    second: Entrance_Sheet_69
+  - first:
+      213: 4449119460654770770
+    second: Entrance_Sheet_70
+  - first:
+      213: -2012074694169403898
+    second: Entrance_Sheet_71
+  - first:
+      213: -559443944005081641
+    second: Entrance_Sheet_72
+  - first:
+      213: 3718427597422163798
+    second: Entrance_Sheet_73
+  - first:
+      213: 3053190274158305119
+    second: Entrance_Sheet_74
+  - first:
+      213: -3985200847702060397
+    second: Entrance_Sheet_75
+  - first:
+      213: 6218719283761538851
+    second: Entrance_Sheet_76
+  - first:
+      213: -5845783052031216025
+    second: Entrance_Sheet_77
+  - first:
+      213: -894825757107553782
+    second: Entrance_Sheet_78
+  - first:
+      213: 6488379750852934440
+    second: Entrance_Sheet_79
+  - first:
+      213: -4497549652348347454
+    second: Entrance_Sheet_80
+  - first:
+      213: -3656749950198566350
+    second: Entrance_Sheet_81
+  - first:
+      213: 441978474527426329
+    second: Entrance_Sheet_82
+  - first:
+      213: 6985329714588318934
+    second: Entrance_Sheet_83
+  - first:
+      213: -6500776680785524412
+    second: Entrance_Sheet_84
+  - first:
+      213: 4245246857054204266
+    second: Entrance_Sheet_85
+  - first:
+      213: -8093414289743339175
+    second: Entrance_Sheet_86
+  - first:
+      213: -8590254603866830911
+    second: Entrance_Sheet_87
+  - first:
+      213: 149657803915490794
+    second: Entrance_Sheet_88
+  - first:
+      213: 3421781091124355815
+    second: Entrance_Sheet_89
+  - first:
+      213: -2589857173872410648
+    second: Entrance_Sheet_90
+  - first:
+      213: -8490257793290171412
+    second: Entrance_Sheet_91
+  - first:
+      213: -3846590054113036945
+    second: Entrance_Sheet_92
+  - first:
+      213: 6672566910750898006
+    second: Entrance_Sheet_93
+  - first:
+      213: -234384802867734304
+    second: Entrance_Sheet_94
+  - first:
+      213: -3043566501164955194
+    second: Entrance_Sheet_95
+  - first:
+      213: 8445658749275191688
+    second: Entrance_Sheet_96
+  - first:
+      213: -1762948135222974448
+    second: Entrance_Sheet_97
+  - first:
+      213: 4419225630489836327
+    second: Entrance_Sheet_0
+  - first:
+      213: -4158593902511225545
+    second: Entrance_Sheet_1
+  - first:
+      213: 3444219729555488908
+    second: Entrance_Sheet_2
+  - first:
+      213: -7879437631170330127
+    second: Entrance_Sheet_3
+  - first:
+      213: 4976996117138353579
+    second: Entrance_Sheet_4
+  - first:
+      213: 8397504181694894413
+    second: Entrance_Sheet_5
+  - first:
+      213: -5924668951554220251
+    second: Entrance_Sheet_6
+  - first:
+      213: 5310063227088223908
+    second: Entrance_Sheet_7
+  - first:
+      213: -7354281910403472009
+    second: Entrance_Sheet_8
+  - first:
+      213: -6425917312559312806
+    second: Entrance_Sheet_9
+  - first:
+      213: 4278626165384509033
+    second: Entrance_Sheet_10
+  - first:
+      213: 6806108512908370432
+    second: Entrance_Sheet_11
+  - first:
+      213: 7342991411721290401
+    second: Entrance_Sheet_12
+  - first:
+      213: -1422131515432166592
+    second: Entrance_Sheet_13
+  - first:
+      213: 4032779134909326771
+    second: Entrance_Sheet_14
+  - first:
+      213: -3505962310232368921
+    second: Entrance_Sheet_15
+  - first:
+      213: 3843749231081895551
+    second: Entrance_Sheet_16
+  - first:
+      213: 2475402437258599603
+    second: Entrance_Sheet_17
+  - first:
+      213: -6859982056754960225
+    second: Entrance_Sheet_18
+  - first:
+      213: 2088999099822233073
+    second: Entrance_Sheet_19
+  - first:
+      213: -1982375817619255575
+    second: Entrance_Sheet_20
+  - first:
+      213: 1782749104116424732
+    second: Entrance_Sheet_21
+  - first:
+      213: 3072171996612263506
+    second: Entrance_Sheet_22
+  - first:
+      213: 6946411358128558627
+    second: Entrance_Sheet_23
+  - first:
+      213: -345763959258685255
+    second: Entrance_Sheet_24
+  - first:
+      213: 5011327311476380299
+    second: Entrance_Sheet_25
+  - first:
+      213: -949421207630366672
+    second: Entrance_Sheet_26
+  - first:
+      213: -6342663674604157605
+    second: Entrance_Sheet_27
+  - first:
+      213: 5676476034752493965
+    second: Entrance_Sheet_28
+  - first:
+      213: -6722804004241937359
+    second: Entrance_Sheet_29
+  - first:
+      213: -3297286269552803150
+    second: Entrance_Sheet_30
+  - first:
+      213: 4747118647493553045
+    second: Entrance_Sheet_31
+  - first:
+      213: -490197052996138497
+    second: Entrance_Sheet_32
+  - first:
+      213: 5479697738204894651
+    second: Entrance_Sheet_33
+  - first:
+      213: 4482557408873951103
+    second: Entrance_Sheet_34
+  - first:
+      213: -892870424123432575
+    second: Entrance_Sheet_35
+  - first:
+      213: -7907857606486147785
+    second: Entrance_Sheet_36
+  - first:
+      213: 1835015250236208715
+    second: Entrance_Sheet_37
+  - first:
+      213: 4296323662977590865
+    second: Entrance_Sheet_38
+  - first:
+      213: -4882530903822426066
+    second: Entrance_Sheet_39
+  - first:
+      213: -6078725513117662329
+    second: Entrance_Sheet_40
+  - first:
+      213: 1273768125322358196
+    second: Entrance_Sheet_41
+  - first:
+      213: 8459426739818054357
+    second: Entrance_Sheet_42
+  - first:
+      213: -7724373634026492380
+    second: Entrance_Sheet_43
+  - first:
+      213: 7810738209584192027
+    second: Entrance_Sheet_44
+  - first:
+      213: 1470233817998169181
+    second: Entrance_Sheet_45
+  - first:
+      213: -8976756224184028125
+    second: Entrance_Sheet_46
+  - first:
+      213: -1218229653939741434
+    second: Entrance_Sheet_47
+  - first:
+      213: 6357867922627711319
+    second: Entrance_Sheet_48
+  - first:
+      213: -8626620859430585909
+    second: Entrance_Sheet_49
+  - first:
+      213: -1329406191847942584
+    second: Entrance_Sheet_50
+  - first:
+      213: -7171510205234723787
+    second: Entrance_Sheet_51
+  - first:
+      213: 6421975440410182525
+    second: Entrance_Sheet_52
+  - first:
+      213: -5352324862749996592
+    second: Entrance_Sheet_53
+  - first:
+      213: -3849646340347218492
+    second: Entrance_Sheet_54
+  - first:
+      213: -2645451070002879495
+    second: Entrance_Sheet_55
+  - first:
+      213: 1832602446138081164
+    second: Entrance_Sheet_56
+  - first:
+      213: 4501432987748797235
+    second: Entrance_Sheet_57
+  - first:
+      213: -3357284196961478531
+    second: Entrance_Sheet_58
+  - first:
+      213: -210241325600038565
+    second: Entrance_Sheet_59
+  - first:
+      213: -378957411460223927
+    second: Entrance_Sheet_60
+  - first:
+      213: 1050846049471421697
+    second: Entrance_Sheet_61
+  - first:
+      213: 2753050576961728239
+    second: Entrance_Sheet_62
+  - first:
+      213: 7520724778115617126
+    second: Entrance_Sheet_63
+  - first:
+      213: 1274754608050953003
+    second: Entrance_Sheet_64
+  - first:
+      213: -5324965792435826643
+    second: Entrance_Sheet_65
+  - first:
+      213: 5431065275668589992
+    second: Entrance_Sheet_66
+  - first:
+      213: 5604781820009729451
+    second: Entrance_Sheet_67
+  - first:
+      213: 5006232604411800869
+    second: Entrance_Sheet_68
+  - first:
+      213: -4865902573387205677
+    second: Entrance_Sheet_69
+  - first:
+      213: 7599947898913227176
+    second: Entrance_Sheet_70
+  - first:
+      213: 1992607056509665519
+    second: Entrance_Sheet_71
+  - first:
+      213: 9038040854904554072
+    second: Entrance_Sheet_72
+  - first:
+      213: -5064515940934676751
+    second: Entrance_Sheet_73
+  - first:
+      213: 3821357156527858051
+    second: Entrance_Sheet_74
+  - first:
+      213: -8065824285963329492
+    second: Entrance_Sheet_75
+  - first:
+      213: 47170121597058865
+    second: Entrance_Sheet_76
+  - first:
+      213: -2738309057515752783
+    second: Entrance_Sheet_77
+  - first:
+      213: -8668149159539433868
+    second: Entrance_Sheet_78
+  - first:
+      213: 8338824453058984455
+    second: Entrance_Sheet_79
+  - first:
+      213: 4322420459993731770
+    second: Entrance_Sheet_80
+  - first:
+      213: 5736045346591266902
+    second: Entrance_Sheet_81
+  - first:
+      213: 7940386735443498799
+    second: Entrance_Sheet_82
+  - first:
+      213: 6577479714451783503
+    second: Entrance_Sheet_83
+  - first:
+      213: 3682117437955810027
+    second: Entrance_Sheet_84
+  - first:
+      213: -672885705777143856
+    second: Entrance_Sheet_85
+  - first:
+      213: -7878043679678813753
+    second: Entrance_Sheet_86
+  - first:
+      213: -8244185208677954359
+    second: Entrance_Sheet_87
+  - first:
+      213: -846172028838709561
+    second: Entrance_Sheet_88
+  - first:
+      213: -8168273805583621734
+    second: Entrance_Sheet_89
+  - first:
+      213: 6592008022414593546
+    second: Entrance_Sheet_90
+  - first:
+      213: -5974947771621625159
+    second: Entrance_Sheet_91
+  - first:
+      213: -1302191273383705496
+    second: Entrance_Sheet_92
+  - first:
+      213: 8078908116983711602
+    second: Entrance_Sheet_93
+  - first:
+      213: -6586878031900704332
+    second: Entrance_Sheet_94
+  - first:
+      213: -1213631737832911134
+    second: Entrance_Sheet_95
+  - first:
+      213: 5860615090593099718
+    second: Entrance_Sheet_96
+  - first:
+      213: 9145609479567530716
+    second: Entrance_Sheet_97
+  - first:
+      213: -4982927621132129287
+    second: Entrance_Sheet_98
+  - first:
+      213: -1569033180305566178
+    second: Entrance_Sheet_98
+  - first:
+      213: -7162906551282505131
+    second: Entrance_Sheet_99
+  - first:
+      213: -6621743719055789850
+    second: Entrance_Sheet_100
+  - first:
+      213: -4912207378532134221
+    second: Entrance_Sheet_101
+  - first:
+      213: -167672626100173280
+    second: Entrance_Sheet_102
+  - first:
+      213: 4790741678639111091
+    second: Entrance_Sheet_103
+  - first:
+      213: -4158603748768564687
+    second: Entrance_Sheet_104
+  - first:
+      213: 8491628569024302331
+    second: Entrance_Sheet_99
+  - first:
+      213: -5759218237906768126
+    second: Entrance_Sheet_100
+  - first:
+      213: -2293068757264449453
+    second: Entrance_Sheet_101
+  - first:
+      213: 8934529205017999182
+    second: Entrance_Sheet_102
+  - first:
+      213: -5449077496836390227
+    second: Entrance_Sheet_103
+  - first:
+      213: -4433077744906231026
+    second: Entrance_Sheet_104
+  - first:
+      213: 257047398816139500
+    second: Entrance_Sheet_105
+  - first:
+      213: 9132701811652794385
+    second: Entrance_Sheet_106
+  - first:
+      213: -8461499849910767354
+    second: Entrance_Sheet_107
+  - first:
+      213: -7205331520543898961
+    second: Entrance_Sheet_108
+  - first:
+      213: 6289578353459698477
+    second: Entrance_Sheet_109
+  - first:
+      213: -6888355012263999202
+    second: Entrance_Sheet_110
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 0
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 1
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 1
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Entrance_Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 400
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72bf5affb4e345d30800000000000000
+      internalID: 4419225630489836327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Entrance_Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 400
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73586bbf0e4b946c0800000000000000
+      internalID: -4158593902511225545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Entrance_Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 400
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c800c8488935ccf20800000000000000
+      internalID: 3444219729555488908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Entrance_Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 400
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f14f34b83d96a290800000000000000
+      internalID: -7879437631170330127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Entrance_Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 400
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bada78a6997d11540800000000000000
+      internalID: 4976996117138353579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Entrance_Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 400
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4118c5bf8de98470800000000000000
+      internalID: 8397504181694894413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Entrance_Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 400
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52f13d29af857cda0800000000000000
+      internalID: -5924668951554220251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Entrance_Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 400
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ae35710f5221b940800000000000000
+      internalID: 5310063227088223908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Entrance_Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 400
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 775e150319750f990800000000000000
+      internalID: -7354281910403472009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Entrance_Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 400
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a509edc004e82d6a0800000000000000
+      internalID: -6425917312559312806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Entrance_Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 400
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9667f6a04dbb06b30800000000000000
+      internalID: 4278626165384509033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Entrance_Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 400
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0026aa6d1a7247e50800000000000000
+      internalID: 6806108512908370432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Entrance_Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 400
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a2446cb8cb87e560800000000000000
+      internalID: 7342991411721290401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Entrance_Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 1300
+        y: 400
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04b17c6ebe2934ce0800000000000000
+      internalID: -1422131515432166592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Entrance_Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 400
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b5a0e1b14f47f730800000000000000
+      internalID: 4032779134909326771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Entrance_Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 400
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e811beaad1585fc0800000000000000
+      internalID: -3505962310232368921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Entrance_Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 400
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7631548f8db75530800000000000000
+      internalID: 3843749231081895551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Entrance_Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 1700
+        y: 400
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bc5fe4c6656a5220800000000000000
+      internalID: 2475402437258599603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Entrance_Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 400
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9821954aa27cc0a0800000000000000
+      internalID: -6859982056754960225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Entrance_Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 1900
+        y: 400
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f5d3010d9d9dfc10800000000000000
+      internalID: 2088999099822233073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Entrance_Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 400
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9eeca7b62bf2d74e0800000000000000
+      internalID: -1982375817619255575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Entrance_Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 2100
+        y: 400
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1061826dd89db810800000000000000
+      internalID: 1782749104116424732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Entrance_Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 322ddf8935c966060800000000000000
+      internalID: 6946411358128558627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Entrance_Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b0e040d289933bf0800000000000000
+      internalID: -345763959258685255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Entrance_Sheet_25
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8253cd73afcb8540800000000000000
+      internalID: 5011327311476380299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Entrance_Sheet_26
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03838f0217af2d2f0800000000000000
+      internalID: -949421207630366672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Entrance_Sheet_27
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5502792ef45af7a0800000000000000
+      internalID: -6342663674604157605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Entrance_Sheet_28
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d89b07bd0e4e6ce40800000000000000
+      internalID: 5676476034752493965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Entrance_Sheet_29
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13ce598806dc3b2a0800000000000000
+      internalID: -6722804004241937359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Entrance_Sheet_30
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b2488c8b9fad32d0800000000000000
+      internalID: -3297286269552803150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Entrance_Sheet_31
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59b6c72324721e140800000000000000
+      internalID: 4747118647493553045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Entrance_Sheet_32
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff9c832a0687239f0800000000000000
+      internalID: -490197052996138497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Entrance_Sheet_33
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb5d63a6f0ccb0c40800000000000000
+      internalID: 5479697738204894651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Entrance_Sheet_34
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7f2a39b63e353e30800000000000000
+      internalID: 4482557408873951103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Entrance_Sheet_35
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 181aba37413eb93f0800000000000000
+      internalID: -892870424123432575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Entrance_Sheet_36
+      rect:
+        serializedVersion: 2
+        x: 1300
+        y: 300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73db50f8765a14290800000000000000
+      internalID: -7907857606486147785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Entrance_Sheet_37
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b46f0c3d5a8477910800000000000000
+      internalID: 1835015250236208715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Entrance_Sheet_38
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15662ebcb9b9f9b30800000000000000
+      internalID: 4296323662977590865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Entrance_Sheet_39
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e202cc00304cd3cb0800000000000000
+      internalID: -4882530903822426066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Entrance_Sheet_40
+      rect:
+        serializedVersion: 2
+        x: 1700
+        y: 300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 783848f2a5704aba0800000000000000
+      internalID: -6078725513117662329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Entrance_Sheet_41
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bded0c7c555da110800000000000000
+      internalID: 1273768125322358196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Entrance_Sheet_42
+      rect:
+        serializedVersion: 2
+        x: 1900
+        y: 300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d2cb46cccbe56570800000000000000
+      internalID: 8459426739818054357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Entrance_Sheet_43
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42e2577fa138dc490800000000000000
+      internalID: -7724373634026492380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Entrance_Sheet_44
+      rect:
+        serializedVersion: 2
+        x: 2100
+        y: 300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1a16dfb401556c60800000000000000
+      internalID: 7810738209584192027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Entrance_Sheet_46
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 324fb3666c72c6380800000000000000
+      internalID: -8976756224184028125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Entrance_Sheet_47
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60d131e859af71fe0800000000000000
+      internalID: -1218229653939741434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Entrance_Sheet_48
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7515311b03fab3850800000000000000
+      internalID: 6357867922627711319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Entrance_Sheet_49
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc93aadb806184880800000000000000
+      internalID: -8626620859430585909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Entrance_Sheet_50
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 846d2bcac100d8de0800000000000000
+      internalID: -1329406191847942584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Entrance_Sheet_51
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53445e1f67da97c90800000000000000
+      internalID: -7171510205234723787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Entrance_Sheet_52
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d738ee153a07f1950800000000000000
+      internalID: 6421975440410182525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Entrance_Sheet_53
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d98b4925e8b8b5b0800000000000000
+      internalID: -5352324862749996592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Entrance_Sheet_54
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c5b8bcbc0f439ac0800000000000000
+      internalID: -3849646340347218492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Entrance_Sheet_55
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f32dcd9448794bd0800000000000000
+      internalID: -2645451070002879495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Entrance_Sheet_56
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8f72981736be6910800000000000000
+      internalID: 1832602446138081164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Entrance_Sheet_57
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33b0ef6e37d487e30800000000000000
+      internalID: 4501432987748797235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Entrance_Sheet_58
+      rect:
+        serializedVersion: 2
+        x: 1300
+        y: 200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d78141e7fc78861d0800000000000000
+      internalID: -3357284196961478531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Entrance_Sheet_59
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b51a086d0a2151df0800000000000000
+      internalID: -210241325600038565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Entrance_Sheet_60
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94c69e8fd3cadbaf0800000000000000
+      internalID: -378957411460223927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Entrance_Sheet_61
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10ddd541aea559e00800000000000000
+      internalID: 1050846049471421697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Entrance_Sheet_62
+      rect:
+        serializedVersion: 2
+        x: 1700
+        y: 200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: feeec78d9ecc43620800000000000000
+      internalID: 2753050576961728239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Entrance_Sheet_63
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6615f05d65bfe5860800000000000000
+      internalID: 7520724778115617126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Entrance_Sheet_64
+      rect:
+        serializedVersion: 2
+        x: 1900
+        y: 200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2b5ba4ef86d0b110800000000000000
+      internalID: 1274754608050953003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Entrance_Sheet_65
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2091cc13dbe916b0800000000000000
+      internalID: -5324965792435826643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Entrance_Sheet_66
+      rect:
+        serializedVersion: 2
+        x: 2100
+        y: 200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ad6f2cd7150f5b40800000000000000
+      internalID: 5431065275668589992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Entrance_Sheet_67
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 100
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bad4f31be5f28cd40800000000000000
+      internalID: 5604781820009729451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Entrance_Sheet_68
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 100
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52da1f09706b97540800000000000000
+      internalID: 5006232604411800869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Entrance_Sheet_69
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 100
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d3b891e367d87cb0800000000000000
+      internalID: -4865902573387205677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Entrance_Sheet_70
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 100
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a1033a0950787960800000000000000
+      internalID: 7599947898913227176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Entrance_Sheet_71
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 100
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe002348f8927ab10800000000000000
+      internalID: 1992607056509665519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Entrance_Sheet_72
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 100
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 852cd0e95429d6d70800000000000000
+      internalID: 9038040854904554072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Entrance_Sheet_73
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 100
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fe094da59937b9b0800000000000000
+      internalID: -5064515940934676751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Entrance_Sheet_74
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 100
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3816db26610380530800000000000000
+      internalID: 3821357156527858051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Entrance_Sheet_75
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 100
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c20ef66eb8f601090800000000000000
+      internalID: -8065824285963329492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Entrance_Sheet_76
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 100
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13ffdc5c9f497a000800000000000000
+      internalID: 47170121597058865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Entrance_Sheet_77
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 100
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b2f98d9b629ff9d0800000000000000
+      internalID: -2738309057515752783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Entrance_Sheet_78
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 100
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47e1d85e34c84b780800000000000000
+      internalID: -8668149159539433868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Entrance_Sheet_79
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 100
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70afbe8b8a479b370800000000000000
+      internalID: 8338824453058984455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Entrance_Sheet_80
+      rect:
+        serializedVersion: 2
+        x: 1300
+        y: 100
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab29ec7d1825cfb30800000000000000
+      internalID: 4322420459993731770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Entrance_Sheet_81
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 100
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 658da131ad68a9f40800000000000000
+      internalID: 5736045346591266902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Entrance_Sheet_82
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 100
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2755597aabe13e60800000000000000
+      internalID: 7940386735443498799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Entrance_Sheet_83
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 100
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4f7c3983f6e74b50800000000000000
+      internalID: 6577479714451783503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Entrance_Sheet_84
+      rect:
+        serializedVersion: 2
+        x: 1700
+        y: 100
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be2a0a61d42891330800000000000000
+      internalID: 3682117437955810027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Entrance_Sheet_85
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 100
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0df17b4040e69a6f0800000000000000
+      internalID: -672885705777143856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Entrance_Sheet_86
+      rect:
+        serializedVersion: 2
+        x: 1900
+        y: 100
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c9abb353019ba290800000000000000
+      internalID: -7878043679678813753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Entrance_Sheet_87
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 100
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cc88367b35c69d80800000000000000
+      internalID: -8244185208677954359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Entrance_Sheet_88
+      rect:
+        serializedVersion: 2
+        x: 2100
+        y: 100
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c67232e50bc144f0800000000000000
+      internalID: -846172028838709561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Entrance_Sheet_89
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a916f0e404674ae80800000000000000
+      internalID: -8168273805583621734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Entrance_Sheet_90
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0e0c84de548b7b50800000000000000
+      internalID: 6592008022414593546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Entrance_Sheet_91
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b23bf888a8b41da0800000000000000
+      internalID: -5974947771621625159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Entrance_Sheet_92
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 864c958afefadede0800000000000000
+      internalID: -1302191273383705496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Entrance_Sheet_93
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27785d5e02c0e1070800000000000000
+      internalID: 8078908116983711602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Entrance_Sheet_94
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b10cb92455b694a0800000000000000
+      internalID: -6586878031900704332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Entrance_Sheet_95
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ee44525d50582fe0800000000000000
+      internalID: -1213631737832911134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Entrance_Sheet_96
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cf6810cf56155150800000000000000
+      internalID: 5860615090593099718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Entrance_Sheet_97
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cda511cbd5bbbee70800000000000000
+      internalID: 9145609479567530716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Entrance_Sheet_98
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e16d517b2aca93ae0800000000000000
+      internalID: -1569033180305566178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Entrance_Sheet_99
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfc8045613358d570800000000000000
+      internalID: 8491628569024302331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Entrance_Sheet_100
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20fad99b6852310b0800000000000000
+      internalID: -5759218237906768126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Entrance_Sheet_101
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 350c4bd4d126d20e0800000000000000
+      internalID: -2293068757264449453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Entrance_Sheet_102
+      rect:
+        serializedVersion: 2
+        x: 1300
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e47737c89f2ddfb70800000000000000
+      internalID: 8934529205017999182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Entrance_Sheet_103
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da20e7713ecf064b0800000000000000
+      internalID: -5449077496836390227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Entrance_Sheet_104
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e03ac29474b8a72c0800000000000000
+      internalID: -4433077744906231026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Entrance_Sheet_105
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce8cfd05f37319300800000000000000
+      internalID: 257047398816139500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Entrance_Sheet_106
+      rect:
+        serializedVersion: 2
+        x: 1700
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 118912b19efddbe70800000000000000
+      internalID: 9132701811652794385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Entrance_Sheet_107
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6013c0ba7b6b29a80800000000000000
+      internalID: -8461499849910767354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Entrance_Sheet_108
+      rect:
+        serializedVersion: 2
+        x: 1900
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa24e055825810c90800000000000000
+      internalID: -7205331520543898961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Entrance_Sheet_109
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2b93f85032194750800000000000000
+      internalID: 6289578353459698477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Entrance_Sheet_110
+      rect:
+        serializedVersion: 2
+        x: 2100
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e190937cc95a760a0800000000000000
+      internalID: -6888355012263999202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
