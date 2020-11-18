@@ -179,8 +179,10 @@ public class Pistol : MonoBehaviour
                 }
                 else if (balasReload > 0)
                 {
-                    numeroBalas += balasReload;
+
                     balasReload -= balasReload;
+                    numeroBalas += balasReload;
+                    
                     /* bulletsText.text = numeroBalas.ToString(); */
                     bulletsImage.fillAmount += FillAmountValue;
                     bullestsToReloadText.text = balasReload.ToString();

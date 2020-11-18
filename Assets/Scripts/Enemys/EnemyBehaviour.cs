@@ -27,14 +27,15 @@ public class EnemyBehaviour : MonoBehaviour
     [HideInInspector] public int numberS;
     public GameObject recoveryPickup;
     public GameObject bulletPickup;
+    public GameObject bladeVFX, pistolVFX;
 
     [Header("Settings")]
     [SerializeField] EnemysType enemysType;
-    protected float stoppingDistance;
-    protected float currentLife;
-    protected float radiusAttack;
-    protected float radiusWalk;
-    protected float enemySpeed;
+    public float stoppingDistance;
+    public float currentLife;
+    public float radiusAttack;
+    public float radiusWalk;
+    public float enemySpeed;
 
 
 
@@ -158,15 +159,49 @@ public class EnemyBehaviour : MonoBehaviour
     {
         if (other.CompareTag("Projectile"))
         {
-            TakeDamage(Projectile.instace.damage);
+
             impact = true;
-            print(currentLife);
+
+            var VFXRotation = new Quaternion();
+
+            if (other.transform.position.x < transform.position.x)
+            {
+
+                VFXRotation = new Quaternion(0, 180, 0, 0);
+
+            }
+            else
+            {
+
+                VFXRotation = new Quaternion(0, 0, 0, 0);
+
+            }
+
+            TakeDamage(Projectile.instace.damage);
+            Instantiate(pistolVFX, pointAttack.position, VFXRotation);
+            Destroy(other.gameObject);
         }
         else if (other.CompareTag("Blade"))
         {
-            TakeDamage(Sword.instace.damage);
             impact = true;
-            print(currentLife);
+
+            var VFXRotation = new Quaternion();
+
+            if (other.transform.position.x < transform.position.x)
+            {
+
+                VFXRotation = new Quaternion(0, 180, 0, 0);
+
+            }
+            else
+            {
+
+                VFXRotation = new Quaternion(0, 0, 0, 0);
+
+            }
+
+            TakeDamage(Sword.instace.damage);
+            Instantiate(bladeVFX, pointAttack.position, VFXRotation);
         }
 
     }

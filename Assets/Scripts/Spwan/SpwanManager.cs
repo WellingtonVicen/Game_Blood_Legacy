@@ -37,16 +37,23 @@ public class SpwanManager : MonoBehaviour
     {
         for (int i = 0; i < pointSpwanEnemy.Length; i++)
         {
-            if (i % 2 == 0)
+
+            if (pointSpwanEnemy[i] != null)
             {
-                numberP = Random.Range(0, 10);
-                Instantiate(EnemyPistol, pointSpwanEnemy[i].transform);
+
+                if (i % 2 == 0)
+                {
+                    numberP = Random.Range(0, 10);
+                    Instantiate(EnemyPistol, pointSpwanEnemy[i].transform);
+                }
+                else
+                {
+                    numberS = Random.Range(5, 10);
+                    Instantiate(EnemytSword, pointSpwanEnemy[i].transform);
+                }
+
             }
-            else
-            {
-                numberS = Random.Range(5, 10);
-                Instantiate(EnemytSword, pointSpwanEnemy[i].transform);
-            }
+
         }
 
     }

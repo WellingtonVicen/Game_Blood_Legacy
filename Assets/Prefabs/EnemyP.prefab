@@ -1663,7 +1663,7 @@ GameObject:
   - component: {fileID: 1654317861609272871}
   - component: {fileID: 7694335315567139314}
   - component: {fileID: 2438762068186528334}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: EnemyP
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -1702,7 +1702,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 8b052645c7d6ff240a5a7081985367fb, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
-  m_ApplyRootMotion: 1
+  m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
@@ -1720,15 +1720,15 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 15.03
+  m_Mass: 3.74
   m_LinearDrag: 0
-  m_AngularDrag: 11.09
-  m_GravityScale: 8.49
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 7
+  m_CollisionDetection: 1
+  m_Constraints: 6
 --- !u!114 &2438762068186528334
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1765,6 +1765,10 @@ MonoBehaviour:
   recoveryPickup: {fileID: 2475445327141257845, guid: 2089cd27cb4c6214d9760835498889fc,
     type: 3}
   bulletPickup: {fileID: 2433626612642383095, guid: d02fd72000f78b54b8220118c92f37a7,
+    type: 3}
+  bladeVFX: {fileID: 1866100729885118665, guid: 4abdaa79dfe40b642a4cc5519a748b09,
+    type: 3}
+  pistolVFX: {fileID: 4849590624506670252, guid: 4888b392b5a62214ca0feb87f1217b75,
     type: 3}
   enemysType: 1
   minDistanceToFireAttack: 4

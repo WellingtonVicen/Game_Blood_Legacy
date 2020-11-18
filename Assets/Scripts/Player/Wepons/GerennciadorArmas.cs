@@ -23,6 +23,8 @@ public class GerennciadorArmas : MonoBehaviour
     public GameObject hudEspada;
     // Start is called before the first frame update
 
+    public Animator HUDAnimator;
+
     public static GerennciadorArmas instance;
     public static GerennciadorArmas Instance { get { return Instance; } }
     void Awake()
@@ -38,16 +40,8 @@ public class GerennciadorArmas : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (estaEmPunhoPistol)
-        {
-            hudEspada.SetActive(false);
-            hudPistol.SetActive(true);
-        }
-        else
-        {
-          hudEspada.SetActive(true);
-          hudPistol.SetActive(false);
-        }
+
+                HUDAnimator.SetBool("Is Gun", estaEmPunhoPistol);
 
     }
 
@@ -58,8 +52,7 @@ public class GerennciadorArmas : MonoBehaviour
         pistolWepon.transform.SetParent(parentPistol);
         pistolWepon.transform.position = parentPistol.position;
         estaEmPunhoPistol = true;
-        hudEspada.SetActive(false);
-        hudPistol.SetActive(true);
+        HUDAnimator.SetBool("Is Gun", true);
 
     }
 

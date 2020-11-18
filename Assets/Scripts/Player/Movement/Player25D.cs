@@ -17,6 +17,8 @@ public class Player25D : MonoBehaviour
     [HideInInspector] public bool estaAndando;
     private bool praTrasE;
     private bool praTrasD;
+    private bool fallTrigger;
+    private bool jumpTrigger;
     [HideInInspector] public bool facingRight;
     [HideInInspector] public bool noChao;
     [HideInInspector] public bool slide;
@@ -35,6 +37,9 @@ public class Player25D : MonoBehaviour
     private bool gravidade1;
     private bool gravidade2;
     private float gravitScale;
+    private LoadScene newPortal;
+    private bool loadingScene;
+
 
     public Transform target;
     public Vector3 offset;
@@ -56,9 +61,14 @@ public class Player25D : MonoBehaviour
     public static bool possuiChave;
     public Transform targetBullets;
     public GerennciadorArmas gerennciadorArmas;
+    public GameObject bladeVFX, pistolVFX, jumpVFX, fallVFX;
+
     [Header("UI")]
     public Image healthBarPistol;
     public Image healthBarSword;
+    public Image Fade;
+
+    private float fadeTransparency;
 
     public static Player25D instace;
     public static Player25D Instace { get { return Instace; } }
@@ -82,11 +92,64 @@ public class Player25D : MonoBehaviour
     {
 
         noChao = Physics2D.OverlapCircle(groundCheckTransform.position, noChaoRaio, solid);
+
+        if (noChao)
+        {
+
+            if (fallTrigger && rb.velocity.y < -3f)
+            {
+
+                Instantiate(fallVFX, targetBullets.transform.position, new Quaternion(0, 0, 0, 0));
+                fallTrigger = false;
+
+            }
+
+        }
+        else
+        {
+
+            fallTrigger = true;
+
+        }
+
+        //Sistema de Fade
+        if (loadingScene)
+        {
+
+            fadeTransparency += 2 * Time.deltaTime;
+
+            if (fadeTransparency > 1)
+            {
+                if (jumpTrigger)
+                {
+
+                    rb.velocity = Vector2.zero;
+                    rb.AddForce(_tr.up * jumpForce, ForceMode2D.Impulse);
+                    jumpTrigger = false;
+
+                }
+
+                SceneManager.LoadScene(newPortal.sceneName);
+                gameObject.transform.position = startPosition;
+                loadingScene = false;
+
+            }
+
+        }
+        else if (!loadingScene && fadeTransparency > 0f)
+        {
+
+            fadeTransparency -= 2 * Time.deltaTime;
+
+        }
+
         // naPlatarmorma = Physics2D.OverlapCircle(groundCheckTransform.position,noChaoRaio);
         Axis = Input.GetAxis("Horizontal");
         estaAndando = Axis != 0;
         praTrasE = Axis < 0 && facingRight;
         praTrasD = Axis > 0 && !facingRight;
+
+        Fade.color = new Color(Fade.color.r, Fade.color.g, Fade.color.b, fadeTransparency);
 
         Walk();
         Jump();
@@ -222,6 +285,8 @@ public class Player25D : MonoBehaviour
         {
             rb.AddForce(_tr.up * jumpForce, ForceMode2D.Impulse);
             qtosPulos++;
+            Instantiate(jumpVFX, targetBullets.transform.position, new Quaternion(0,0,0,0));
+
         }
         else if (Input.GetButtonDown("Jump") && !noChao && qtosPulos <= 1 && possuiHabilPulo && !crouch)
         {
@@ -360,35 +425,71 @@ public class Player25D : MonoBehaviour
     {
         if (collider.CompareTag("Portal"))
         {
-            var newPortal = collider.GetComponent<LoadScene>();
-            SceneManager.LoadScene(newPortal.sceneName);
+            newPortal = collider.GetComponent<LoadScene>();
             startPosition = newPortal.newPostionPortal;
-            gameObject.transform.position = startPosition;
+            loadingScene = true;
 
         }
         else if (collider.CompareTag("PortalS") && rb.velocity.y > 0f)
         {
-            var newPortal = collider.GetComponent<LoadScene>();
-            SceneManager.LoadScene(newPortal.sceneName);
+            newPortal = collider.GetComponent<LoadScene>();
             startPosition = newPortal.newPostionPortal;
-            gameObject.transform.position = startPosition;
+            loadingScene = true;
+            jumpTrigger = true;
             qtosPulos = 0;
 
         }
         else if (collider.CompareTag("PortalC") && possuiChave)
         {
-            var newPortal = collider.GetComponent<LoadScene>();
-            SceneManager.LoadScene(newPortal.sceneName);
+            newPortal = collider.GetComponent<LoadScene>();
             startPosition = newPortal.newPostionPortal;
-            gameObject.transform.position = startPosition;
+            loadingScene = true;
         }
         else if (collider.CompareTag("Bullet"))
         {
+
             TakeDamage(Bullet.instace.damage);
+            Destroy(collider.gameObject);
+
+            var VFXRotation = new Quaternion();
+
+            if (collider.transform.position.x < transform.position.x)
+            {
+
+                VFXRotation = new Quaternion(0, 180, 0, 0);
+
+            }
+            else
+            {
+
+                VFXRotation = new Quaternion(0, 0, 0, 0);
+
+            }
+
+            Instantiate(pistolVFX, targetBullets.transform.position, VFXRotation);
+
+
         }
         else if (collider.CompareTag("Stick"))
         {
             TakeDamage(SwordWeapon.instace.damage);
+
+            var VFXRotation = new Quaternion();
+
+            if (collider.transform.position.x < transform.position.x)
+            {
+
+                VFXRotation = new Quaternion(0, 180, 0, 0);
+
+            }
+            else
+            {
+
+                VFXRotation = new Quaternion(0, 0, 0, 0);
+
+            }
+
+            Instantiate(bladeVFX, targetBullets.transform.position, VFXRotation);
         }
         else if (collider.CompareTag("PickUp"))
         {

@@ -13,7 +13,6 @@ public class Sword : MonoBehaviour
     public Transform slashEffectTrasnform;
     private float contSlash;
 
-
     public static Sword instace;
     public static Sword Instace { get { return instace; } }
 

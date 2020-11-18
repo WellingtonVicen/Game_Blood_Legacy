@@ -345,7 +345,7 @@ CircleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1102330111422088985}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -2734,7 +2734,7 @@ GameObject:
   - component: {fileID: 2069860655503238798}
   - component: {fileID: 5240142430754806097}
   - component: {fileID: 3094785024912259192}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Enemyy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -2749,8 +2749,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4688919239956784718}
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0.807, y: 0.54, z: -0.63}
-  m_LocalScale: {x: 0.43228, y: 0.43228, z: 0.43228}
+  m_LocalPosition: {x: -0.807, y: 0.52502, z: -0.63}
+  m_LocalScale: {x: 0.43228, y: 0.4377267, z: 0.43228}
   m_Children:
   - {fileID: 3418638477884649128}
   - {fileID: 1981194540798273063}
@@ -2800,8 +2800,8 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 7
+  m_CollisionDetection: 1
+  m_Constraints: 4
 --- !u!114 &3094785024912259192
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2839,7 +2839,16 @@ MonoBehaviour:
     type: 3}
   bulletPickup: {fileID: 2433626612642383095, guid: d02fd72000f78b54b8220118c92f37a7,
     type: 3}
+  bladeVFX: {fileID: 1866100729885118665, guid: 4abdaa79dfe40b642a4cc5519a748b09,
+    type: 3}
+  pistolVFX: {fileID: 4849590624506670252, guid: 4888b392b5a62214ca0feb87f1217b75,
+    type: 3}
   enemysType: 0
+  stoppingDistance: 0
+  currentLife: 0
+  radiusAttack: 0
+  radiusWalk: 0
+  enemySpeed: 0
 --- !u!1 &4816572939349799981
 GameObject:
   m_ObjectHideFlags: 0
