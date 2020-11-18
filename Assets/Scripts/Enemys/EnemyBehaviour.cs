@@ -22,6 +22,11 @@ public class EnemyBehaviour : MonoBehaviour
     public GameObject weapon;
     public LayerMask playerLayer;
     public LayerMask solid;
+    public bool isSorted;
+    [HideInInspector] public int numberP;
+    [HideInInspector] public int numberS;
+    public GameObject recoveryPickup;
+    public GameObject bulletPickup;
 
     [Header("Settings")]
     [SerializeField] EnemysType enemysType;
@@ -43,12 +48,24 @@ public class EnemyBehaviour : MonoBehaviour
     }
     protected void StartStatus()
     {
+        numberP = Random.Range(0, 10);
+        numberS = Random.Range(5, 10);
 
+        if (numberP == SpwanManager.instace.numberP || numberS == SpwanManager.instace.numberS)
+        {
+            isSorted = true;
+            print("Sorteado");
+        }
+        else
+        {
+            isSorted = false;
+            print("Nao Sorteado");
+        }
         switch (enemysType)
         {
             case EnemysType.SWORD:
                 stoppingDistance = 1.3f;
-                currentLife = 80f;
+                currentLife = 10f;
                 radiusAttack = 1.89f;
                 radiusWalk = 1.4f;
                 enemySpeed = 2;
@@ -105,7 +122,27 @@ public class EnemyBehaviour : MonoBehaviour
         // spwanManger
         isDead = true;
         Destroy(this.gameObject, 1.3f);
+        if (isSorted)
+        {
+            Invoke("Drop", 1f);
+            isSorted = false;
 
+        }
+
+
+    }
+
+    protected void Drop()
+    {
+        if (numberP <= 5)
+        {
+
+            Instantiate(recoveryPickup, pointAttack.position, Quaternion.identity);
+        }
+        else
+        {
+            Instantiate(bulletPickup, pointAttack.position, Quaternion.identity);
+        }
     }
 
     void OnDrawGizmosSelected()

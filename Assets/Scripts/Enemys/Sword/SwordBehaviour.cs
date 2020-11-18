@@ -14,7 +14,6 @@ public class SwordBehaviour : EnemyBehaviour
     void Start()
     {
         StartStatus();
-
         animator = GetComponent<Animator>();
 
     }

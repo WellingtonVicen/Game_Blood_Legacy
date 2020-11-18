@@ -7,8 +7,8 @@ public class Pistol : MonoBehaviour
 {
 
     [Header("Settings")]
-    public int numeroBalas = 7;
-    public int balasReload = 7;
+    public int numeroBalas = 6;
+    public int balasReload = 6;
 
     [Header("References")]
     public Transform projectileExit;
@@ -20,6 +20,10 @@ public class Pistol : MonoBehaviour
     [Header("UI")]
     public Text bulletsText;
     public Text bullestsToReloadText;
+
+    public Image bulletsImage;
+    public float FillAmountValue;
+
 
     // Start is called before the first frame update
 
@@ -37,49 +41,80 @@ public class Pistol : MonoBehaviour
 
     }
 
+    private void FixedUpdate()
+    {
+        FillAmount();
+    }
+
     public void Fire()
     {
         if (numeroBalas > 0)
         {
             Instantiate(projectile, projectileExit.position, Quaternion.identity);
             numeroBalas--;
-            bulletsText.text = numeroBalas.ToString();
+            bulletsImage.fillAmount -= 0.166f;
+            /* bulletsText.text = numeroBalas.ToString(); */
             //print(numeroBalas);
         }
 
     }
 
+    public void FillAmount()
+    {
+        switch (balasReload)
+        {
+            case 6:
+                FillAmountValue = 1f;
+                print(FillAmountValue);
+                break;
+            case 5:
+                FillAmountValue = 0.83f;
+                print(FillAmountValue);
+                break;
+            case 4:
+                FillAmountValue = 0.664f;
+                print(FillAmountValue);
+                break;
+            case 3:
+                FillAmountValue = 0.498f;
+                print(FillAmountValue);
+                break;
+            case 2:
+                FillAmountValue = 0.322f;
+                print(FillAmountValue);
+                break;
+            case 1:
+                FillAmountValue = 0.166f;
+                print(FillAmountValue);
+                break;
+            case 0:
+                FillAmountValue = 0f;
+                print(FillAmountValue);
+                break;
+            default:
+                FillAmountValue = 1f;
+                print(FillAmountValue);
+                break;
+
+        }
+
+    }
+
+
     public void Reload()
     {
         switch (numeroBalas)
         {
-            case 7:
-            //
-                break;
+
             case 6:
-                if (balasReload >= 1)
-                {
-                    balasReload--;
-                    numeroBalas++;
-                    bulletsText.text = numeroBalas.ToString();
-                    bullestsToReloadText.text = balasReload.ToString();
-                    break;
-                }
-                else if (balasReload > 0)
-                {
-                    numeroBalas += balasReload;
-                    balasReload -= balasReload;
-                    bulletsText.text = numeroBalas.ToString();
-                    bullestsToReloadText.text = balasReload.ToString();
-                    break;
-                }
+
                 break;
             case 5:
-                if (balasReload >= 2)
+                if (balasReload >= 1)
                 {
-                    balasReload -= 2;
-                    numeroBalas += 2;
-                    bulletsText.text = numeroBalas.ToString();
+                    balasReload -= 1;
+                    numeroBalas += 1;
+                    bulletsImage.fillAmount += 0.166f;
                     bullestsToReloadText.text = balasReload.ToString();
                     break;
                 }
@@ -87,17 +122,18 @@ public class Pistol : MonoBehaviour
                 {
                     numeroBalas += balasReload;
                     balasReload -= balasReload;
-                    bulletsText.text = numeroBalas.ToString();
+                    /* bulletsText.text = numeroBalas.ToString(); */
+                    bulletsImage.fillAmount += FillAmountValue;
                     bullestsToReloadText.text = balasReload.ToString();
                     break;
                 }
                 break;
             case 4:
-                if (balasReload >= 3)
+                if (balasReload >= 2)
                 {
-                    balasReload -= 3;
-                    numeroBalas += 3;
-                    bulletsText.text = numeroBalas.ToString();
+                    balasReload -= 2;
+                    numeroBalas += 2;
+                    bulletsImage.fillAmount += 0.322f;
                     bullestsToReloadText.text = balasReload.ToString();
                     break;
                 }
@@ -105,17 +141,19 @@ public class Pistol : MonoBehaviour
                 {
                     numeroBalas += balasReload;
                     balasReload -= balasReload;
-                    bulletsText.text = numeroBalas.ToString();
+                    /* bulletsText.text = numeroBalas.ToString(); */
+                    bulletsImage.fillAmount += FillAmountValue;
                     bullestsToReloadText.text = balasReload.ToString();
                     break;
                 }
                 break;
             case 3:
-                if (balasReload >= 4)
+                if (balasReload >= 3)
                 {
-                    balasReload -= 4;
-                    numeroBalas += 4;
-                    bulletsText.text = numeroBalas.ToString();
+                    balasReload -= 3;
+                    numeroBalas += 3;
+                    /*  bulletsText.text = numeroBalas.ToString(); */
+                    bulletsImage.fillAmount += 0.498f;
                     bullestsToReloadText.text = balasReload.ToString();
                     break;
                 }
@@ -123,17 +161,19 @@ public class Pistol : MonoBehaviour
                 {
                     numeroBalas += balasReload;
                     balasReload -= balasReload;
-                    bulletsText.text = numeroBalas.ToString();
+                    /*  bulletsText.text = numeroBalas.ToString(); */
+                    bulletsImage.fillAmount += FillAmountValue;
                     bullestsToReloadText.text = balasReload.ToString();
                     break;
                 }
                 break;
             case 2:
-                if (balasReload >= 5)
+                if (balasReload >= 4)
                 {
-                    numeroBalas += 5;
+                    numeroBalas += 4;
                     balasReload -= balasReload;
-                    bulletsText.text = numeroBalas.ToString();
+                    /* bulletsText.text = numeroBalas.ToString(); */
+                    bulletsImage.fillAmount += 0.664f;
                     bullestsToReloadText.text = balasReload.ToString();
                     break;
                 }
@@ -141,17 +181,19 @@ public class Pistol : MonoBehaviour
                 {
                     numeroBalas += balasReload;
                     balasReload -= balasReload;
-                    bulletsText.text = numeroBalas.ToString();
+                    /* bulletsText.text = numeroBalas.ToString(); */
+                    bulletsImage.fillAmount += FillAmountValue;
                     bullestsToReloadText.text = balasReload.ToString();
                     break;
                 }
                 break;
             case 1:
-                if (balasReload >= 6)
+                if (balasReload >= 5)
                 {
-                    balasReload -= 6;
-                    numeroBalas += 6;
-                    bulletsText.text = numeroBalas.ToString();
+                    balasReload -= 5;
+                    numeroBalas += 5;
+                    /* bulletsText.text = numeroBalas.ToString(); */
+                    bulletsImage.fillAmount += 0.83f;
                     bullestsToReloadText.text = balasReload.ToString();
                     break;
                 }
@@ -159,17 +201,19 @@ public class Pistol : MonoBehaviour
                 {
                     numeroBalas += balasReload;
                     balasReload -= balasReload;
-                    bulletsText.text = numeroBalas.ToString();
+                    /*    bulletsText.text = numeroBalas.ToString(); */
+                    bulletsImage.fillAmount += FillAmountValue;
                     bullestsToReloadText.text = balasReload.ToString();
                     break;
                 }
                 break;
             case 0:
-                if (balasReload >= 7)
+                if (balasReload >= 6)
                 {
-                    balasReload -= 7;
-                    numeroBalas += 7;
-                    bulletsText.text = numeroBalas.ToString();
+                    numeroBalas += 6;
+                    balasReload -= 6;
+                    /*  bulletsText.text = numeroBalas.ToString(); */
+                    bulletsImage.fillAmount += 1f;
                     bullestsToReloadText.text = balasReload.ToString();
                     break;
                 }
@@ -177,7 +221,8 @@ public class Pistol : MonoBehaviour
                 {
                     balasReload -= balasReload;
                     numeroBalas += balasReload;
-                    bulletsText.text = numeroBalas.ToString();
+                    /* bulletsText.text = n umeroBalas.ToString(); */
+                    bulletsImage.fillAmount += FillAmountValue;
                     bullestsToReloadText.text = balasReload.ToString();
                     break;
                 }
@@ -188,6 +233,8 @@ public class Pistol : MonoBehaviour
 
     }
 }
+
+
 
 
 

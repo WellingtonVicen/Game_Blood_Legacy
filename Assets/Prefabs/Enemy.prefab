@@ -1574,7 +1574,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 6
+  m_Constraints: 7
 --- !u!114 &8496740134777769290
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1597,18 +1597,22 @@ MonoBehaviour:
   pointWalkRight: {fileID: 140594834}
   pointWalkLeft: {fileID: 1751925349}
   pointAttack: {fileID: 536055061}
+  parentWepon: {fileID: 0}
+  weapon: {fileID: 0}
   playerLayer:
     serializedVersion: 2
     m_Bits: 2048
   solid:
     serializedVersion: 2
     m_Bits: 256
+  isSorted: 0
+  numberP: 0
+  numberS: 0
+  recoveryPickup: {fileID: 2475445327141257845, guid: 2089cd27cb4c6214d9760835498889fc,
+    type: 3}
+  bulletPickup: {fileID: 2433626612642383095, guid: d02fd72000f78b54b8220118c92f37a7,
+    type: 3}
   enemysType: 0
-  stoppingDistance: 1.3
-  currentLife: 0
-  radiusAttack: 1.89
-  radiusWalk: 1.4
-  enemySpeed: 2
 --- !u!1 &5386556785265367151
 GameObject:
   m_ObjectHideFlags: 0

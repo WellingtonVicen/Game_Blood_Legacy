@@ -7,7 +7,7 @@ public class Bullet : MonoBehaviour
 
     [Header("Settings")]
     public float speed = 0.5f;
-    public float damage = 0.1f;
+    public float damage = 2f;
     Vector3 direction;
     private Vector3 speedProjectile = Vector3.zero;
 

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GerennciadorArmas : MonoBehaviour
 {
@@ -17,6 +18,9 @@ public class GerennciadorArmas : MonoBehaviour
     [Header("Setings")]
     public bool estaEmPunhoPistol;
     public bool estaEmPunhoSword;
+    [Header("UI")]
+    public GameObject hudPistol;
+    public GameObject hudEspada;
     // Start is called before the first frame update
 
     public static GerennciadorArmas instance;
@@ -28,12 +32,22 @@ public class GerennciadorArmas : MonoBehaviour
 
     void Start()
     {
-        
+
 
     }
     // Update is called once per frame
     void Update()
     {
+        if (estaEmPunhoPistol)
+        {
+            hudEspada.SetActive(false);
+            hudPistol.SetActive(true);
+        }
+        else
+        {
+          hudEspada.SetActive(true);
+          hudPistol.SetActive(false);
+        }
 
     }
 
@@ -44,6 +58,9 @@ public class GerennciadorArmas : MonoBehaviour
         pistolWepon.transform.SetParent(parentPistol);
         pistolWepon.transform.position = parentPistol.position;
         estaEmPunhoPistol = true;
+        hudEspada.SetActive(false);
+        hudPistol.SetActive(true);
+
     }
 
     public void WeaponSwitch()
@@ -56,6 +73,7 @@ public class GerennciadorArmas : MonoBehaviour
             estaEmPunhoSword = true;
             swordWepon.transform.position = parentSword.position;
             swordWepon.transform.SetParent(parentSword);
+           
 
         }
         else if (estaEmPunhoSword)
@@ -66,6 +84,7 @@ public class GerennciadorArmas : MonoBehaviour
             estaEmPunhoPistol = true;
             pistolWepon.transform.SetParent(parentPistol);
             pistolWepon.transform.position = parentPistol.position;
+
         }
 
     }
@@ -87,11 +106,16 @@ public class GerennciadorArmas : MonoBehaviour
         }
     }
 
+    /* public void RequestReloadPent()
+    {
+        Pistol.Instace.ReloadPent(3);
+    } */
+
     public void RequestSlash()
     {
         if (estaEmPunhoSword)
         {
-              Sword.Instace.Slash();
+            Sword.Instace.Slash();
         }
     }
 

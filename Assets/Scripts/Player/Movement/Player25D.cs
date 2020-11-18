@@ -12,7 +12,7 @@ public class Player25D : MonoBehaviour
     public float currentLife;
     public PlayerType playerType;
     [Range(0, 10)] public float sensitivity;
-    [HideInInspector] public float noChaoRaio;
+    [Range(0, 10)] public float noChaoRaio;
     [Range(0, 15)] public float jumpForce;
     [HideInInspector] public bool estaAndando;
     private bool praTrasE;
@@ -57,7 +57,8 @@ public class Player25D : MonoBehaviour
     public Transform targetBullets;
     public GerennciadorArmas gerennciadorArmas;
     [Header("UI")]
-    public Image healthBar;
+    public Image healthBarPistol;
+    public Image healthBarSword;
 
     public static Player25D instace;
     public static Player25D Instace { get { return Instace; } }
@@ -329,10 +330,22 @@ public class Player25D : MonoBehaviour
     public void TakeDamage(float damage)
     {
         currentLife -= damage;
-        healthBar.fillAmount -= damage/100;
+        healthBarPistol.fillAmount -= damage / 100;
+        healthBarSword.fillAmount -= damage / 100;
         if (currentLife <= 0)
         {
             print("Morreu");
+
+        }
+    }
+
+    public void RecoverLife(float recovery)
+    {
+        if (currentLife <= 100)
+        {
+            currentLife += recovery;
+            healthBarPistol.fillAmount += recovery / 100;
+            healthBarSword.fillAmount += recovery / 100;
 
         }
     }
@@ -373,8 +386,15 @@ public class Player25D : MonoBehaviour
         {
             TakeDamage(Bullet.instace.damage);
         }
-
-
+        else if (collider.CompareTag("Stick"))
+        {
+            TakeDamage(SwordWeapon.instace.damage);
+        }
+        else if (collider.CompareTag("PickUp"))
+        {
+            RecoverLife(2);
+        }
+       
     }
 
     void OnTriggerStay2D(Collider2D collider)

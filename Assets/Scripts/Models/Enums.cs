@@ -16,3 +16,9 @@ public enum EnemysType
     SWORD,
     PISTOL,
 }
+
+public enum PickupsType
+{
+    RECOVERY,
+    BULLET,
+}
