@@ -52,6 +52,7 @@ public class Player25D : MonoBehaviour
     Vector3 lookPos;
     private float contador;
     [HideInInspector] public int qtosPulos;
+    [HideInInspector] public bool isDead;
     public float crouched;
     public static bool crouch;
     private string sceneName;
@@ -85,6 +86,7 @@ public class Player25D : MonoBehaviour
         slide = false;
         //possuiChave = true;    para poder acessar a salas Vermelhas
         gerennciadorArmas.StartWepon();
+        isDead = false;
     }
 
 
@@ -285,7 +287,7 @@ public class Player25D : MonoBehaviour
         {
             rb.AddForce(_tr.up * jumpForce, ForceMode2D.Impulse);
             qtosPulos++;
-            Instantiate(jumpVFX, targetBullets.transform.position, new Quaternion(0,0,0,0));
+            Instantiate(jumpVFX, targetBullets.transform.position, new Quaternion(0, 0, 0, 0));
 
         }
         else if (Input.GetButtonDown("Jump") && !noChao && qtosPulos <= 1 && possuiHabilPulo && !crouch)
@@ -399,8 +401,12 @@ public class Player25D : MonoBehaviour
         healthBarSword.fillAmount -= damage / 100;
         if (currentLife <= 0)
         {
-            print("Morreu");
+            Dead();
 
+        }
+        else
+        {
+            isDead = false;
         }
     }
 
@@ -417,7 +423,7 @@ public class Player25D : MonoBehaviour
 
     void Dead()
     {
-
+        isDead = true;
         Destroy(this.gameObject, 1.5f);
     }
 
@@ -496,7 +502,7 @@ public class Player25D : MonoBehaviour
         {
             RecoverLife(2);
         }
-       
+
     }
 
     void OnTriggerStay2D(Collider2D collider)

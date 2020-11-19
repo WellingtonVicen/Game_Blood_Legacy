@@ -73,7 +73,7 @@ public class EnemyBehaviour : MonoBehaviour
             case EnemysType.PISTOL:
                 stoppingDistance = 2f;
                 currentLife = 10f;
-                radiusAttack = 3f;
+                radiusAttack = 3.8f;
                 radiusWalk = 0.58f;
                 enemySpeed = 2;
                 break;

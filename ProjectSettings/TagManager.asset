@@ -23,6 +23,7 @@ TagManager:
   - Spwan
   - PickUp
   - PickUpB
+  - Manager
   layers:
   - Default
   - TransparentFX
