@@ -2312,8 +2312,12 @@ MonoBehaviour:
   - {fileID: 862897273683686502}
   - {fileID: 6425200123963838106}
   - {fileID: 1250554344686936868}
+  Shouts: []
   Slash: {fileID: 5390895364826839716}
   Shot: {fileID: 9008908938819067644}
+  Jumping: {fileID: 0}
+  Falling: {fileID: 0}
+  Reloading: {fileID: 0}
 --- !u!82 &7390764387982673080
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2326,7 +2330,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 7d86bea6bf760d8408dfce6dce9e57c3, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.75
   m_Pitch: 1
   Loop: 0
   Mute: 0

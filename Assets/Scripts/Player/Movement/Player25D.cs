@@ -101,6 +101,7 @@ public class Player25D : MonoBehaviour
             if (fallTrigger && rb.velocity.y < -3f)
             {
 
+                sm.PlayFalling();
                 Instantiate(fallVFX, targetBullets.transform.position, new Quaternion(0, 0, 0, 0));
                 fallTrigger = false;
 
@@ -288,6 +289,7 @@ public class Player25D : MonoBehaviour
             rb.AddForce(_tr.up * jumpForce, ForceMode2D.Impulse);
             qtosPulos++;
             Instantiate(jumpVFX, targetBullets.transform.position, new Quaternion(0, 0, 0, 0));
+            sm.PlayJump();
 
         }
         else if (Input.GetButtonDown("Jump") && !noChao && qtosPulos <= 1 && possuiHabilPulo && !crouch)

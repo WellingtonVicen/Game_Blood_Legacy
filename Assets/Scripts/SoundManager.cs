@@ -5,10 +5,10 @@ using UnityEngine;
 public class SoundManager : MonoBehaviour
 {
 
-    public AudioSource[] Steps;
+    public AudioSource[] Steps, Shouts;
     public AudioSource Slash;
-    public AudioSource Shot;
-    private int lastStep;
+    public AudioSource Shot, Jumping, Falling, Reloading;
+    private int lastStep, lastShout;
 
     // Start is called before the first frame update
     void Start()
@@ -60,6 +60,42 @@ public class SoundManager : MonoBehaviour
 
     }
 
+    public void PlayJump()
+    {
+        var random = 0;
+
+        for (bool canPass = false; canPass == true;)
+        {
+
+            random = Random.Range(0, Shouts.Length - 1);
+
+            if (random != lastShout)
+            {
+
+                canPass = true;
+
+            }
+
+        }
+
+        Shouts[random].Play();
+        Jumping.Play();
+
+    }
+
+    public void PlayFalling()
+    {
+
+        Falling.Play();
+
+    }
+
+    public void PlayReloading()
+    {
+
+        Reloading.Play();
+
+    }
 
 
 }
