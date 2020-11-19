@@ -65,35 +65,27 @@ public class Pistol : MonoBehaviour
         {
             case 6:
                 FillAmountValue = 1f;
-                print(FillAmountValue);
                 break;
             case 5:
                 FillAmountValue = 0.83f;
-                print(FillAmountValue);
                 break;
             case 4:
                 FillAmountValue = 0.664f;
-                print(FillAmountValue);
                 break;
             case 3:
                 FillAmountValue = 0.498f;
-                print(FillAmountValue);
                 break;
             case 2:
                 FillAmountValue = 0.322f;
-                print(FillAmountValue);
                 break;
             case 1:
                 FillAmountValue = 0.166f;
-                print(FillAmountValue);
                 break;
             case 0:
                 FillAmountValue = 0f;
-                print(FillAmountValue);
                 break;
             default:
                 FillAmountValue = 1f;
-                print(FillAmountValue);
                 break;
 
         }
@@ -120,8 +112,8 @@ public class Pistol : MonoBehaviour
                 }
                 else if (balasReload > 0)
                 {
-                    numeroBalas += balasReload;
                     balasReload -= balasReload;
+                    numeroBalas += balasReload;
                     /* bulletsText.text = numeroBalas.ToString(); */
                     bulletsImage.fillAmount += FillAmountValue;
                     bullestsToReloadText.text = balasReload.ToString();
@@ -171,7 +163,7 @@ public class Pistol : MonoBehaviour
                 if (balasReload >= 4)
                 {
                     numeroBalas += 4;
-                    balasReload -= balasReload;
+                    balasReload -= 4;
                     /* bulletsText.text = numeroBalas.ToString(); */
                     bulletsImage.fillAmount += 0.664f;
                     bullestsToReloadText.text = balasReload.ToString();
@@ -180,9 +172,8 @@ public class Pistol : MonoBehaviour
                 else if (balasReload > 0)
                 {
 
-                    balasReload -= balasReload;
                     numeroBalas += balasReload;
-                    
+                    balasReload -= balasReload;
                     /* bulletsText.text = numeroBalas.ToString(); */
                     bulletsImage.fillAmount += FillAmountValue;
                     bullestsToReloadText.text = balasReload.ToString();
@@ -201,8 +192,8 @@ public class Pistol : MonoBehaviour
                 }
                 else if (balasReload > 0)
                 {
-                    numeroBalas += balasReload;
                     balasReload -= balasReload;
+                    numeroBalas += balasReload;
                     /*    bulletsText.text = numeroBalas.ToString(); */
                     bulletsImage.fillAmount += FillAmountValue;
                     bullestsToReloadText.text = balasReload.ToString();
@@ -221,8 +212,8 @@ public class Pistol : MonoBehaviour
                 }
                 else if (balasReload > 0)
                 {
-                    balasReload -= balasReload;
                     numeroBalas += balasReload;
+                    balasReload -= balasReload;
                     /* bulletsText.text = n umeroBalas.ToString(); */
                     bulletsImage.fillAmount += FillAmountValue;
                     bullestsToReloadText.text = balasReload.ToString();

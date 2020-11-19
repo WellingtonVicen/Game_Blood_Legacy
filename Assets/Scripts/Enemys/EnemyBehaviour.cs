@@ -31,11 +31,11 @@ public class EnemyBehaviour : MonoBehaviour
 
     [Header("Settings")]
     [SerializeField] EnemysType enemysType;
-    public float stoppingDistance;
-    public float currentLife;
+    protected  float stoppingDistance;
+    protected float currentLife;
     public float radiusAttack;
     public float radiusWalk;
-    public float enemySpeed;
+    protected float enemySpeed;
 
 
 
@@ -67,15 +67,15 @@ public class EnemyBehaviour : MonoBehaviour
             case EnemysType.SWORD:
                 stoppingDistance = 1.3f;
                 currentLife = 10f;
-                radiusAttack = 1.89f;
-                radiusWalk = 1.4f;
+                radiusAttack = 0.54f;
+                radiusWalk = 0.58f;
                 enemySpeed = 2;
                 break;
             case EnemysType.PISTOL:
                 stoppingDistance = 2f;
                 currentLife = 10f;
-                radiusAttack = 5;
-                radiusWalk = 3f;
+                radiusAttack = 3f;
+                radiusWalk = 0.58f;
                 enemySpeed = 2;
                 break;
         }
@@ -90,7 +90,7 @@ public class EnemyBehaviour : MonoBehaviour
             if (Vector2.Distance(playerTransform.position, transform.position) > stoppingDistance)
             {
                 transform.Rotate(0.0f, -180f, 0.0f, Space.World);
-                transform.position = Vector2.MoveTowards(transform.position, playerTransform.transform.position, enemySpeed * Time.deltaTime);
+                transform.position = Vector3.MoveTowards(transform.position, playerTransform.position, enemySpeed * Time.deltaTime);
 
             }
 
@@ -100,7 +100,7 @@ public class EnemyBehaviour : MonoBehaviour
             if (Vector2.Distance(playerTransform.position, transform.position) > stoppingDistance)
             {
                 transform.Rotate(0.0f, 0, 0.0f, Space.World);
-                transform.position = Vector2.MoveTowards(transform.position, playerTransform.transform.position, enemySpeed * Time.deltaTime);
+                transform.position = Vector3.MoveTowards(transform.position, playerTransform.position, enemySpeed * Time.deltaTime);
 
             }
 
