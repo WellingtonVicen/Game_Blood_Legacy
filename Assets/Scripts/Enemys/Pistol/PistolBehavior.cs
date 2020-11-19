@@ -11,6 +11,7 @@ public class PistolBehavior : EnemyBehaviour
     public Transform exitBullet;
     public Transform chest;
     float fireDelay;
+    public SoundManager sm;
 
     Vector3 lookPos;
     [HideInInspector] public bool isShooting;
@@ -104,6 +105,7 @@ public class PistolBehavior : EnemyBehaviour
         {
             fireDelay = 0;
             Instantiate(bullet, exitBullet.position, Quaternion.identity);
+            sm.PlayShot();
             isShooting = true;
         }
 

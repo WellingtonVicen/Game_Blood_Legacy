@@ -13,6 +13,7 @@ public class Pistol : MonoBehaviour
     [Header("References")]
     public Transform projectileExit;
     public GameObject projectile;
+    public SoundManager sn;
 
     public static Pistol instace;
     public static Pistol Instace { get { return instace; } }
@@ -53,6 +54,7 @@ public class Pistol : MonoBehaviour
             Instantiate(projectile, projectileExit.position, Quaternion.identity);
             numeroBalas--;
             bulletsImage.fillAmount -= 0.166f;
+            sn.PlayShot();
             /* bulletsText.text = numeroBalas.ToString(); */
             //print(numeroBalas);
         }

@@ -411,8 +411,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -203655887218126122, guid: 35049003a627a3f4baf18cb0bb2584ae,
-    type: 3}
+  m_Motion: {fileID: 7400000, guid: 20344939a80e28849ba0617f46df0e5b, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -1937,8 +1936,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -203655887218126122, guid: 846f169f28c5aba44ab2c220f61dbe2b,
-    type: 3}
+  m_Motion: {fileID: 7400000, guid: 3e2bc4be984fa1944ae7c718b8b32f5a, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -2729,8 +2727,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -203655887218126122, guid: 14effd85cddf14048bb460d4825a3e96,
-    type: 3}
+  m_Motion: {fileID: 7400000, guid: 70bb6b538334ffe4a903777ccda37912, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -2842,8 +2839,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -203655887218126122, guid: 4719255526985a4459189a35b1eb5e7d,
-    type: 3}
+  m_Motion: {fileID: 7400000, guid: dfe7d75c2d2b5954bb0ea6a342fd9d0c, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -4293,8 +4289,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -203655887218126122, guid: 0c129e2acfbc4ef4bbf929153583b31b,
-    type: 3}
+  m_Motion: {fileID: 7400000, guid: 71953004781ad6948a10e90979664f3f, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -4325,8 +4320,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -203655887218126122, guid: 20d0a782b1f942e47b9268344213fcad,
-    type: 3}
+  m_Motion: {fileID: 7400000, guid: 381710d369539c64fbf46e0888bcddf5, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 

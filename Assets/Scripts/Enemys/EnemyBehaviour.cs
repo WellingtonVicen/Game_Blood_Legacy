@@ -28,6 +28,7 @@ public class EnemyBehaviour : MonoBehaviour
     public GameObject recoveryPickup;
     public GameObject bulletPickup;
     public GameObject bladeVFX, pistolVFX;
+    public SoundManager sm;
 
     [Header("Settings")]
     [SerializeField] EnemysType enemysType;
@@ -36,8 +37,6 @@ public class EnemyBehaviour : MonoBehaviour
     public float radiusAttack;
     public float radiusWalk;
     protected float enemySpeed;
-
-
 
     protected void Verifications()
     {
@@ -200,12 +199,13 @@ public class EnemyBehaviour : MonoBehaviour
 
             }
 
+            sm.PlaySlash();
             TakeDamage(Sword.instace.damage);
             Instantiate(bladeVFX, pointAttack.position, VFXRotation);
         }
 
     }
-    void OnTriggerStay2D(Collider2D other)
+    void OnwTriggerStay2D(Collider2D other)
     {
         impact = false;
     }

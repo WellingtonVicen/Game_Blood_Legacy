@@ -40,7 +40,6 @@ public class Player25D : MonoBehaviour
     private LoadScene newPortal;
     private bool loadingScene;
 
-
     public Transform target;
     public Vector3 offset;
 
@@ -62,6 +61,7 @@ public class Player25D : MonoBehaviour
     public Transform targetBullets;
     public GerennciadorArmas gerennciadorArmas;
     public GameObject bladeVFX, pistolVFX, jumpVFX, fallVFX;
+    public SoundManager sm;
 
     [Header("UI")]
     public Image healthBarPistol;
@@ -489,6 +489,7 @@ public class Player25D : MonoBehaviour
 
             }
 
+            sm.PlaySlash();
             Instantiate(bladeVFX, targetBullets.transform.position, VFXRotation);
         }
         else if (collider.CompareTag("PickUp"))
