@@ -10,11 +10,20 @@ public class Menu : MonoBehaviour
         SceneManager.LoadScene(1);
     }
 
-    public void Options() {
-        print("OPTIONS");
+    public void Options()
+    {
+        SceneManager.LoadScene(23);
     }
-    public void Restart() {
-        SceneManager.LoadScene(1);
+    public void Restart()
+    {
+        GerennciadorArmas.instance.player.isDead = false;
+        GerennciadorArmas.instance.player.possuiChave = false;
+        SceneManager.LoadScene(0);
+    }
+
+    public void Voltar()
+    {
+        SceneManager.LoadScene(0);
     }
 
     public void Quit()

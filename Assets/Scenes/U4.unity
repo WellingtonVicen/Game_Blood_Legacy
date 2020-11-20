@@ -25371,7 +25371,7 @@ MonoBehaviour:
   - {fileID: 248389609}
   - {fileID: 0}
   - {fileID: 281565983}
-  EnemyPistol: {fileID: 5430968607712507623, guid: 2993541a79ac1064e8ead609ba77a752,
+  EnemyPistol: {fileID: 4688919239956784718, guid: 6cf7c0d12b0cddf498de80b87661f6f6,
     type: 3}
   EnemytSword: {fileID: 4688919239956784718, guid: 594f0b735af0fd341a9c7376a19691da,
     type: 3}

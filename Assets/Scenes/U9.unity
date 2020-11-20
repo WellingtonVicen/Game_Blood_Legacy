@@ -147,7 +147,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 11924222}
   m_LocalRotation: {x: -0, y: -0.9409905, z: -0, w: -0.3384331}
-  m_LocalPosition: {x: 14.11, y: -0.69, z: -1.57}
+  m_LocalPosition: {x: 14.11, y: -0.69, z: -2.11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1028498716}
@@ -9704,7 +9704,7 @@ MonoBehaviour:
   pointSpwanEnemy:
   - {fileID: 0}
   - {fileID: 11924223}
-  EnemyPistol: {fileID: 5430968607712507623, guid: 2993541a79ac1064e8ead609ba77a752,
+  EnemyPistol: {fileID: 4688919239956784718, guid: 6cf7c0d12b0cddf498de80b87661f6f6,
     type: 3}
   EnemytSword: {fileID: 4688919239956784718, guid: 594f0b735af0fd341a9c7376a19691da,
     type: 3}

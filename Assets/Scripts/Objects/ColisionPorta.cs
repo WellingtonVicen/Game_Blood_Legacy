@@ -16,7 +16,7 @@ public class ColisionPorta : MonoBehaviour
     void Update()
     {
 
-        if (Player25D.possuiChave)
+        if (GerennciadorArmas.instance.player.possuiChave)
         {
             colider.isTrigger = true;
         }

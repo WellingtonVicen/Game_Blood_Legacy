@@ -418,13 +418,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 362921848}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.77, y: 2.14, z: -0.72}
+  m_LocalRotation: {x: -0, y: 0.9992851, z: -0, w: 0.03780649}
+  m_LocalPosition: {x: 1.95, y: -0.67, z: -1.69}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2103730147}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 175.667, z: 0}
 --- !u!1001 &451302472
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30557,13 +30557,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1556533479}
-  m_LocalRotation: {x: -0, y: 0.9992192, z: -0, w: 0.039510835}
-  m_LocalPosition: {x: 18.78, y: 25.21, z: -0.72}
+  m_LocalRotation: {x: -0, y: 0.9957793, z: -0, w: -0.09178037}
+  m_LocalPosition: {x: 16.6, y: 25.21, z: -1.61}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2103730147}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 175.471, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 190.532, z: 0}
 --- !u!1001 &1564189612
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -44849,7 +44849,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1938519598}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 22.31, y: 12.21, z: -0.72}
+  m_LocalPosition: {x: 24.27, y: 12.272, z: -0.72}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2103730147}
@@ -44892,7 +44892,7 @@ MonoBehaviour:
   - {fileID: 1556533480}
   - {fileID: 971595716}
   - {fileID: 708560754}
-  EnemyPistol: {fileID: 5430968607712507623, guid: 2993541a79ac1064e8ead609ba77a752,
+  EnemyPistol: {fileID: 4688919239956784718, guid: 6cf7c0d12b0cddf498de80b87661f6f6,
     type: 3}
   EnemytSword: {fileID: 4688919239956784718, guid: 594f0b735af0fd341a9c7376a19691da,
     type: 3}

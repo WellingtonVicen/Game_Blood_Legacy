@@ -58,7 +58,8 @@ public class Player25D : MonoBehaviour
     private string sceneName;
     [HideInInspector] public Vector3 startPosition;
     public static bool naPlatarmorma;
-    public static bool possuiChave;
+    /* [HideInInspector] */
+    public bool possuiChave;
     public Transform targetBullets;
     public GerennciadorArmas gerennciadorArmas;
     public GameObject bladeVFX, pistolVFX, jumpVFX, fallVFX;
@@ -68,6 +69,11 @@ public class Player25D : MonoBehaviour
     public Image healthBarPistol;
     public Image healthBarSword;
     public Image Fade;
+    public GameObject objective;
+    public GameObject objective1;
+    public GameObject avisoPorta;
+    public GameObject avisoPortaChave;
+    public GameObject canvas;
 
     private float fadeTransparency;
 
@@ -84,9 +90,9 @@ public class Player25D : MonoBehaviour
         chest = animator.GetBoneTransform(HumanBodyBones.Chest);
         hand = animator.GetBoneTransform(HumanBodyBones.RightUpperArm);
         slide = false;
-        //possuiChave = true;    para poder acessar a salas Vermelhas
         gerennciadorArmas.StartWepon();
         isDead = false;
+
     }
 
 
@@ -154,6 +160,17 @@ public class Player25D : MonoBehaviour
 
         Fade.color = new Color(Fade.color.r, Fade.color.g, Fade.color.b, fadeTransparency);
 
+        if (possuiChave)
+        {
+            objective.SetActive(false);
+            objective1.SetActive(true);
+        }
+        else
+        {
+            objective1.SetActive(false);
+            objective.SetActive(true);
+        }
+
         Walk();
         Jump();
         Animations();
@@ -179,19 +196,22 @@ public class Player25D : MonoBehaviour
 
     private void LateUpdate()
     {
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        if (!isDead)
+        {
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-        target.localPosition = ray.GetPoint(valorPoint);
+            target.localPosition = ray.GetPoint(valorPoint);
 
-        chest.LookAt(new Vector2(target.position.x, target.position.y));
-        //hand.LookAt(target.localPosition);
-        //print(target.localPosition);
-        Pistol.instace.projectileExit.LookAt(new Vector2(target.position.x, target.position.y));
+            chest.LookAt(new Vector2(target.position.x, target.position.y));
+            //hand.LookAt(target.localPosition);
+            //print(target.localPosition);
 
-        chest.rotation = chest.rotation * Quaternion.Euler(offset);
-        hand.rotation = hand.rotation * Quaternion.Euler(offset);
+            // Pistol.instace.projectileExit.LookAt(new Vector2(target.position.x, target.position.y));
+
+            chest.rotation = chest.rotation * Quaternion.Euler(offset);
+            hand.rotation = hand.rotation * Quaternion.Euler(offset);
+        }
     }
-
 
     void RequestSwitch()
     {
@@ -210,7 +230,6 @@ public class Player25D : MonoBehaviour
             gerennciadorArmas.RequestReload();
         }
     }
-
     void HandleAimPos()
     {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -246,17 +265,13 @@ public class Player25D : MonoBehaviour
             facingRight = true;
         }
     }
-
-
-
-
     void Walk()
     {
-        if (estaAndando && facingRight && Axis > 0)
+        if (estaAndando && facingRight && Axis > 0 && !isDead)
         {
             rb.velocity = new Vector2(sensitivity, rb.velocity.y);
         }
-        else if (estaAndando && !facingRight && Axis < 0)
+        else if (estaAndando && !facingRight && Axis < 0 && !isDead)
         {
             rb.velocity = new Vector2(-sensitivity, rb.velocity.y);
         }
@@ -284,7 +299,7 @@ public class Player25D : MonoBehaviour
 
     public void Jump()
     {
-        if (Input.GetButtonDown("Jump") && noChao && !crouch)
+        if (Input.GetButtonDown("Jump") && noChao && !crouch && !isDead)
         {
             rb.AddForce(_tr.up * jumpForce, ForceMode2D.Impulse);
             qtosPulos++;
@@ -292,7 +307,7 @@ public class Player25D : MonoBehaviour
             sm.PlayJump();
 
         }
-        else if (Input.GetButtonDown("Jump") && !noChao && qtosPulos <= 1 && possuiHabilPulo && !crouch)
+        else if (Input.GetButtonDown("Jump") && !noChao && qtosPulos <= 1 && possuiHabilPulo && !crouch && !isDead)
         {
             qtosPulos++;
             rb.velocity = new Vector2(rb.velocity.x, 0);
@@ -342,12 +357,12 @@ public class Player25D : MonoBehaviour
 
     void Slide()
     {
-        if (Input.GetKeyDown(KeyCode.C) && facingRight && !slide && !crouch)
+        if (Input.GetKeyDown(KeyCode.C) && facingRight && !slide && !crouch && !isDead)
         {
             rb.AddForce(new Vector2(slideForce, 0), ForceMode2D.Impulse);
             slide = true;
         }
-        else if (Input.GetKeyDown(KeyCode.C) && !facingRight && !slide && !crouch)
+        else if (Input.GetKeyDown(KeyCode.C) && !facingRight && !slide && !crouch && !isDead)
         {
             rb.AddForce(new Vector2(-slideForce, 0), ForceMode2D.Impulse);
             slide = true;
@@ -426,7 +441,10 @@ public class Player25D : MonoBehaviour
     void Dead()
     {
         isDead = true;
+        SceneManager.LoadScene(2);
         Destroy(this.gameObject, 1.5f);
+        Destroy(targetTransform.gameObject, 1.5f);
+        Destroy(canvas.gameObject, 1.5f);
     }
 
     void OnTriggerEnter2D(Collider2D collider)
@@ -452,6 +470,17 @@ public class Player25D : MonoBehaviour
             newPortal = collider.GetComponent<LoadScene>();
             startPosition = newPortal.newPostionPortal;
             loadingScene = true;
+            SceneManager.LoadScene(24);
+
+        }
+        else if (collider.CompareTag("PortalC") && !possuiChave)
+        {
+            avisoPortaChave.SetActive(true);
+        }
+        else if (collider.CompareTag("PortalT"))
+        {
+            avisoPorta.SetActive(true);
+
         }
         else if (collider.CompareTag("Bullet"))
         {
@@ -522,8 +551,18 @@ public class Player25D : MonoBehaviour
         {
             naPlatarmorma = !naPlatarmorma;
         }
+        else if (collider.CompareTag("PortalT"))
+        {
+            avisoPorta.SetActive(false);
+        }
+        else if (collider.CompareTag("PortalC") && !possuiChave)
+        {
+            avisoPortaChave.SetActive(false);
+        }
 
     }
+
+
 
 
 }

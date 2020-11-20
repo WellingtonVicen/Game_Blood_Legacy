@@ -2,38 +2,37 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BulletBehaviour : PickupBehaviour
+public class KeyBehaviour : MonoBehaviour
 {
-    // Start is called before the first frame update
 
     [Header("Settings")]
     public float xAngle;
     public float yAngle;
     public float zAngle;
+
+    // Start is called before the first frame update
     void Start()
     {
-        StartPickup();
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        RotateBullet();
+        RotateKey();
     }
 
-    public void RotateBullet()
+    public void RotateKey()
     {
         transform.Rotate(xAngle, yAngle, zAngle, Space.World);
     }
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        if (collider.gameObject.CompareTag("ColiderPlayer") && Pistol.instace.balasReload < 6)
+        if (collider.gameObject.CompareTag("ColiderPlayer"))
         {
+            GerennciadorArmas.instance.player.possuiChave = true;
             Destroy(this.gameObject);
-            Pistol.Instace.balasReload += 3;
-            Pistol.Instace.bullestsToReloadText.text = Pistol.Instace.balasReload.ToString();
 
         }
     }

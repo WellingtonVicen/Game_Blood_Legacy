@@ -17,28 +17,33 @@ public class CameraFollow : MonoBehaviour
     private float yMin;
 
     private Transform target;
-
-    private Player player;
+    /* public Player25D player; */
 
 
     private void Awake()
     {
 
+        target = GameObject.FindWithTag("Player").transform;
     }
 
     // Start is called before the first frame update
     void Start()
     {
 
-      target = GameObject.FindWithTag("Player").transform;
+
 
     }
 
     // Update is called once per frame
     private void LateUpdate()
     {
+
+
+
         transform.position = new Vector3(Mathf.Clamp(target.position.x, xMin, xMax)
         , Mathf.Clamp(target.position.y, yMin, yMax), transform.position.z);
+
+
     }
 
 
