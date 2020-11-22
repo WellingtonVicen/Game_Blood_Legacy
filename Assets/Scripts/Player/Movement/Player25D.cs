@@ -64,6 +64,7 @@ public class Player25D : MonoBehaviour
     public GerennciadorArmas gerennciadorArmas;
     public GameObject bladeVFX, pistolVFX, jumpVFX, fallVFX;
     public SoundManager sm;
+    public bool win;
 
     [Header("UI")]
     public Image healthBarPistol;
@@ -72,7 +73,7 @@ public class Player25D : MonoBehaviour
     public GameObject objective;
     public GameObject objective1;
     public GameObject avisoPorta;
-    public GameObject avisoPortaChave;
+    public Animator avisoPortaChave;
     public GameObject canvas;
 
     private float fadeTransparency;
@@ -82,6 +83,8 @@ public class Player25D : MonoBehaviour
 
     void Start()
     {
+
+        fadeTransparency = 1f;
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         _tr = GetComponent<Transform>();
@@ -139,7 +142,21 @@ public class Player25D : MonoBehaviour
                 }
 
                 SceneManager.LoadScene(newPortal.sceneName);
-                gameObject.transform.position = startPosition;
+                if (win)
+                {
+
+                    Destroy(this.gameObject);
+                    Destroy(targetTransform.gameObject);
+                    Destroy(canvas.gameObject);
+
+                }
+                else
+                {
+
+                    gameObject.transform.position = startPosition;
+
+                }
+
                 loadingScene = false;
 
             }
@@ -159,17 +176,6 @@ public class Player25D : MonoBehaviour
         praTrasD = Axis > 0 && !facingRight;
 
         Fade.color = new Color(Fade.color.r, Fade.color.g, Fade.color.b, fadeTransparency);
-
-        if (possuiChave)
-        {
-            objective.SetActive(false);
-            objective1.SetActive(true);
-        }
-        else
-        {
-            objective1.SetActive(false);
-            objective.SetActive(true);
-        }
 
         Walk();
         Jump();
@@ -442,9 +448,9 @@ public class Player25D : MonoBehaviour
     {
         isDead = true;
         SceneManager.LoadScene(2);
-        Destroy(this.gameObject, 1.5f);
-        Destroy(targetTransform.gameObject, 1.5f);
-        Destroy(canvas.gameObject, 1.5f);
+        Destroy(this.gameObject);
+        Destroy(targetTransform.gameObject);
+        Destroy(canvas.gameObject);
     }
 
     void OnTriggerEnter2D(Collider2D collider)
@@ -467,15 +473,16 @@ public class Player25D : MonoBehaviour
         }
         else if (collider.CompareTag("PortalC") && possuiChave)
         {
+
             newPortal = collider.GetComponent<LoadScene>();
             startPosition = newPortal.newPostionPortal;
+            win = true;
             loadingScene = true;
-            SceneManager.LoadScene(24);
 
         }
         else if (collider.CompareTag("PortalC") && !possuiChave)
         {
-            avisoPortaChave.SetActive(true);
+            avisoPortaChave.SetBool("On", true);
         }
         else if (collider.CompareTag("PortalT"))
         {
@@ -557,7 +564,7 @@ public class Player25D : MonoBehaviour
         }
         else if (collider.CompareTag("PortalC") && !possuiChave)
         {
-            avisoPortaChave.SetActive(false);
+            avisoPortaChave.SetBool("On", false);
         }
 
     }

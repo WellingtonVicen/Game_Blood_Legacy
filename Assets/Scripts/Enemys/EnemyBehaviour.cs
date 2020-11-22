@@ -177,7 +177,7 @@ public class EnemyBehaviour : MonoBehaviour
             }
 
             TakeDamage(Projectile.instace.damage);
-            Instantiate(pistolVFX, pointAttack.position, VFXRotation);
+            Instantiate(pistolVFX, transform.position + new Vector3(0, 1.2f, 0), VFXRotation);
             Destroy(other.gameObject);
         }
         else if (other.CompareTag("Blade"))
@@ -201,7 +201,7 @@ public class EnemyBehaviour : MonoBehaviour
 
             sm.PlaySlash();
             TakeDamage(Sword.instace.damage);
-            Instantiate(bladeVFX, pointAttack.position, VFXRotation);
+            Instantiate(bladeVFX, transform.position + new Vector3 (0,1.2f,0), VFXRotation);
         }
 
     }

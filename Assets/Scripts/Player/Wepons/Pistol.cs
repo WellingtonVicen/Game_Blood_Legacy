@@ -31,7 +31,6 @@ public class Pistol : MonoBehaviour
     void Awake()
     {
         instace = this;
-        bulletsText.text = numeroBalas.ToString();
         bullestsToReloadText.text = balasReload.ToString();
     }
 

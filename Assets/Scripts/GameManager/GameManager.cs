@@ -28,7 +28,7 @@ public class GameManager : MonoBehaviour
     {
         if (GerennciadorArmas.instance.player.isDead)
         {
-           
+
              SceneManager.LoadScene(1);
         }
     }
