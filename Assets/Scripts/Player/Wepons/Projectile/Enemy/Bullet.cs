@@ -38,4 +38,24 @@ public class Bullet : MonoBehaviour
         // transform.Translate(direction * speed * Time.deltaTime);
         transform.localPosition = Vector3.SmoothDamp(transform.position, direction, ref speedProjectile, 1 / speed);
     }
+
+    
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        Destroy(gameObject);
+       
+    }
+
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        Destroy(gameObject);
+       
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        Destroy(gameObject);
+      
+    }
+
 }

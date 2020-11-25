@@ -29,7 +29,7 @@ public class BulletBehaviour : PickupBehaviour
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        if (collider.gameObject.CompareTag("ColiderPlayer") && Pistol.instace.balasReload < 6)
+        if (collider.gameObject.CompareTag("ColiderPlayer"))
         {
             Destroy(this.gameObject);
             Pistol.Instace.balasReload += 3;

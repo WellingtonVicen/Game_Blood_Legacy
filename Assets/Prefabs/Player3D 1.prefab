@@ -2341,6 +2341,7 @@ MonoBehaviour:
   isDead: 0
   crouched: 0
   startPosition: {x: 0, y: 0, z: 0}
+  possuiChave: 0
   targetBullets: {fileID: 6117305019751071330}
   gerennciadorArmas: {fileID: 6117305019677077320}
   bladeVFX: {fileID: 1866100729885118665, guid: 4abdaa79dfe40b642a4cc5519a748b09,
@@ -2350,9 +2351,15 @@ MonoBehaviour:
   jumpVFX: {fileID: 5520924490554262368, guid: 469afdb8eb8a2ef47912587a8e16b39e, type: 3}
   fallVFX: {fileID: 3103049170334972683, guid: 5b2b417ac52d0dc48beeb646b77ffda2, type: 3}
   sm: {fileID: 516567322}
+  win: 0
   healthBarPistol: {fileID: 0}
   healthBarSword: {fileID: 0}
   Fade: {fileID: 0}
+  objective: {fileID: 0}
+  objective1: {fileID: 0}
+  avisoPorta: {fileID: 0}
+  avisoPortaChave: {fileID: 0}
+  canvas: {fileID: 0}
 --- !u!114 &6117305019677077321
 MonoBehaviour:
   m_ObjectHideFlags: 0

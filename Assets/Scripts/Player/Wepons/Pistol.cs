@@ -50,7 +50,7 @@ public class Pistol : MonoBehaviour
     {
         if (numeroBalas > 0)
         {
-            Instantiate(projectile, projectileExit.position, Quaternion.identity);
+            Instantiate(projectile, projectileExit.position, Quaternion.identity); 
             numeroBalas--;
             bulletsImage.fillAmount -= 0.166f;
             sm.PlayShot();

@@ -538,7 +538,7 @@ public class Player25D : MonoBehaviour
         }
         else if (collider.CompareTag("PickUp"))
         {
-            RecoverLife(2);
+            RecoverLife(25);
         }
 
     }

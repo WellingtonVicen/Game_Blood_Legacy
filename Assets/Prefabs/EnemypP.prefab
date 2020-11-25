@@ -2316,6 +2316,7 @@ MonoBehaviour:
     type: 3}
   sm: {fileID: 873422269572587763}
   enemysType: 1
+  currentLife: 30
   radiusAttack: 3
   radiusWalk: 0.58
   minDistanceToFireAttack: 4

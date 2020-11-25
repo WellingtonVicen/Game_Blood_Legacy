@@ -10,6 +10,7 @@ public class SpwanManager : MonoBehaviour
     public Transform[] pointSpwanEnemy;
     public GameObject EnemyPistol;
     public GameObject EnemytSword;
+    
 
     [HideInInspector]public int numberP;
     [HideInInspector]public int numberS;
@@ -43,12 +44,12 @@ public class SpwanManager : MonoBehaviour
 
                 if (i % 2 == 0)
                 {
-                    numberP = Random.Range(0, 10);
+                    numberP = Random.Range(0, 6);
                     Instantiate(EnemyPistol, pointSpwanEnemy[i].transform);
                 }
                 else
                 {
-                    numberS = Random.Range(5, 10);
+                    numberS = Random.Range(0,6);
                     Instantiate(EnemytSword, pointSpwanEnemy[i].transform);
                 }
 

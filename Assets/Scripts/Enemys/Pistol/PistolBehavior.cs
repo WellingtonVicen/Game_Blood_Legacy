@@ -23,7 +23,7 @@ public class PistolBehavior : EnemyBehaviour
     {
         playerTransform = GameObject.Find("Player3D").transform;
         StartStatus();
-       
+
     }
 
     // Start is called before the first frame update
@@ -44,6 +44,17 @@ public class PistolBehavior : EnemyBehaviour
         Animations();
         WhipPistol();
         RotatePistol();
+
+        if (impact)
+        {
+            contImp += Time.deltaTime;
+        }
+
+        if (contImp > 0.4f)
+        {
+            impact = false;
+            contImp = 0;
+        }
 
     }
 

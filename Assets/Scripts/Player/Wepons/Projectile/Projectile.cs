@@ -6,12 +6,14 @@ public class Projectile : MonoBehaviour
 {
 
     [Header("Settings")]
-    public float speed = 20f;
+    public float speed = 10f;
+
+    public int damage = 10;
+
+    private int firedByLayer;
     Rigidbody2D rb;
     private Vector3 speedProjectile = Vector3.up;
     private Vector3 posDest;
-
-    public int damage = 10;
     public static Projectile instace;
     public static Projectile Instace { get { return Instace; } }
 
@@ -25,8 +27,6 @@ public class Projectile : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        posDest = GerennciadorArmas.instance.player.target.localPosition;
-
 
     }
 
@@ -34,14 +34,43 @@ public class Projectile : MonoBehaviour
     void Update()
     {
         Movement();
-        Destroy(this.gameObject, 1f);
+        Destroy(gameObject, 2f);
 
+    }
+
+    private void FixedUpdate()
+    {
+        Destroy(gameObject, 2f);
     }
 
     void Movement()
     {
+        posDest = GerennciadorArmas.instance.player.target.localPosition;
         transform.position = Vector3.SmoothDamp(transform.position, posDest, ref speedProjectile, 1 / speed);
     }
+
+   /*  private void OnTriggerEnter2D(Collider2D other)
+    {
+        Destroy(gameObject);
+        print("Pegou");
+    }
+
+    private void OnTriggerStay2D(Collider2D other)
+    {
+          Destroy(gameObject);
+        print("Pegou");
+    } */
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+         Destroy(gameObject);
+        print("Pegou");
+    }
+
+
+
+
+
 
 
 

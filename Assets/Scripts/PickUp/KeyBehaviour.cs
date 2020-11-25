@@ -33,6 +33,7 @@ public class KeyBehaviour : MonoBehaviour
         {
             GerennciadorArmas.instance.player.possuiChave = true;
             Destroy(this.gameObject);
+            
 
         }
     }

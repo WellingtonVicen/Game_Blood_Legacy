@@ -23,10 +23,10 @@ public class PickupBehaviour : MonoBehaviour
         switch (PickupsType)
         {
             case PickupsType.RECOVERY:
-                recovery = 25f;
+                recovery = 50f;
                 break;
             case PickupsType.BULLET:
-                bullets = 3;
+                bullets = 6;
                 break;
             default:
                 recovery = 0;

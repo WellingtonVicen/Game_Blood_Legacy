@@ -25,14 +25,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5927879254284196334}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0.74343854, y: -0, z: -0, w: 0.6688043}
   m_LocalPosition: {x: -5.218656, y: 1.4918895, z: 0}
-  m_LocalScale: {x: 0.22797325, y: 0.22797325, z: 0.22797325}
+  m_LocalScale: {x: 0.29139265, y: 0.29139265, z: 0.29139265}
   m_Children:
   - {fileID: 7889876607274915889}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -96.05, y: 0, z: 0}
 --- !u!58 &5722709194427903994
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -61,8 +61,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7a10e0abbb50cd4faded7279429d347, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  xAngle: 0
-  yAngle: 0
+  xAngle: 1.26
+  yAngle: 1.5
   zAngle: 0
 --- !u!1 &6127433834574862043
 GameObject:

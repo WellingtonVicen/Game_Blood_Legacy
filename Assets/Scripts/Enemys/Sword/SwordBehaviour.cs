@@ -23,6 +23,17 @@ public class SwordBehaviour : EnemyBehaviour
         Verifications();
         Move();
         Animations();
+
+        if (impact)
+        {
+            contImp += Time.deltaTime;
+        }
+        
+        if (contImp > 0.4f)
+        {
+            impact = false;
+            contImp = 0;
+        }
     }
 
     void Animations()

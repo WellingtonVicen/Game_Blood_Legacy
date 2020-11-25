@@ -8,9 +8,12 @@ public class EnemyBehaviour : MonoBehaviour
     [HideInInspector] public bool isWalk;
     [HideInInspector] public bool walkRight;
     [HideInInspector] public bool walkLeft;
-    [HideInInspector] public bool impact;
+    /*  [HideInInspector] */
+    public bool impact;
     [HideInInspector] public bool readyAttack;
     [HideInInspector] public bool isDead;
+    /*  [HideInInspector]  */
+    public float contImp;
 
 
     [Header("References")]
@@ -32,11 +35,12 @@ public class EnemyBehaviour : MonoBehaviour
 
     [Header("Settings")]
     [SerializeField] EnemysType enemysType;
-    protected  float stoppingDistance;
-    protected float currentLife;
+    public float stoppingDistance;
+    public float currentLife;
     public float radiusAttack;
     public float radiusWalk;
     protected float enemySpeed;
+
 
     protected void Verifications()
     {
@@ -48,31 +52,29 @@ public class EnemyBehaviour : MonoBehaviour
     }
     protected void StartStatus()
     {
-        numberP = Random.Range(0, 10);
-        numberS = Random.Range(5, 10);
+        numberP = Random.Range(0, 6);
+        numberS = Random.Range(0, 6);
 
         if (numberP == SpwanManager.instace.numberP || numberS == SpwanManager.instace.numberS)
         {
             isSorted = true;
-            print("Sorteado");
         }
         else
         {
             isSorted = false;
-            print("Nao Sorteado");
         }
         switch (enemysType)
         {
             case EnemysType.SWORD:
-                stoppingDistance = 1.3f;
-                currentLife = 10f;
-                radiusAttack = 0.54f;
-                radiusWalk = 0.58f;
+                stoppingDistance = 1.6f;
+                currentLife = 20f;
+                radiusAttack = 1.71f;
+                radiusWalk = 1.02f;
                 enemySpeed = 2;
                 break;
             case EnemysType.PISTOL:
                 stoppingDistance = 2f;
-                currentLife = 10f;
+                currentLife = 30f;
                 radiusAttack = 3.8f;
                 radiusWalk = 0.58f;
                 enemySpeed = 2;
@@ -109,7 +111,7 @@ public class EnemyBehaviour : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        currentLife -= damage;
+        currentLife = currentLife - damage;
 
         if (currentLife <= 0)
         {
@@ -134,7 +136,7 @@ public class EnemyBehaviour : MonoBehaviour
 
     protected void Drop()
     {
-        if (numberP <= 5)
+        if (numberP >= 3)
         {
 
             Instantiate(recoveryPickup, pointAttack.position, Quaternion.identity);
@@ -158,7 +160,6 @@ public class EnemyBehaviour : MonoBehaviour
     {
         if (other.CompareTag("Projectile"))
         {
-
             impact = true;
 
             var VFXRotation = new Quaternion();
@@ -176,13 +177,20 @@ public class EnemyBehaviour : MonoBehaviour
 
             }
 
-            TakeDamage(Projectile.instace.damage);
             Instantiate(pistolVFX, transform.position + new Vector3(0, 1.2f, 0), VFXRotation);
+            TakeDamage(Projectile.instace.damage);
             Destroy(other.gameObject);
         }
         else if (other.CompareTag("Blade"))
         {
             impact = true;
+
+            if (contImp > 0.4f)
+            {
+                impact = false;
+                contImp = 0;
+
+            }
 
             var VFXRotation = new Quaternion();
 
@@ -201,7 +209,7 @@ public class EnemyBehaviour : MonoBehaviour
 
             sm.PlaySlash();
             TakeDamage(Sword.instace.damage);
-            Instantiate(bladeVFX, transform.position + new Vector3 (0,1.2f,0), VFXRotation);
+            Instantiate(bladeVFX, transform.position + new Vector3(0, 1.2f, 0), VFXRotation);
         }
 
     }
@@ -214,7 +222,6 @@ public class EnemyBehaviour : MonoBehaviour
     {
 
         impact = false;
-
     }
 
 
