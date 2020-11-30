@@ -8,13 +8,10 @@ public class EnemyBehaviour : MonoBehaviour
     [HideInInspector] public bool isWalk;
     [HideInInspector] public bool walkRight;
     [HideInInspector] public bool walkLeft;
-    /*  [HideInInspector] */
-    public bool impact;
+    [HideInInspector] public bool impact;
     [HideInInspector] public bool readyAttack;
     [HideInInspector] public bool isDead;
-    /*  [HideInInspector]  */
-    public float contImp;
-
+    [HideInInspector] public float contImp;
 
     [Header("References")]
     public Transform playerTransform;
@@ -67,7 +64,7 @@ public class EnemyBehaviour : MonoBehaviour
         {
             case EnemysType.SWORD:
                 stoppingDistance = 1.6f;
-                currentLife = 20f;
+                currentLife = 25f;
                 radiusAttack = 1.71f;
                 radiusWalk = 1.02f;
                 enemySpeed = 2;
@@ -121,7 +118,6 @@ public class EnemyBehaviour : MonoBehaviour
 
     protected void Dead()
     {
-        // spwanManger
         isDead = true;
         Destroy(this.gameObject, 1.3f);
         if (isSorted)
@@ -130,8 +126,6 @@ public class EnemyBehaviour : MonoBehaviour
             isSorted = false;
 
         }
-
-
     }
 
     protected void Drop()
@@ -223,9 +217,6 @@ public class EnemyBehaviour : MonoBehaviour
 
         impact = false;
     }
-
-
-
 }
 
 
