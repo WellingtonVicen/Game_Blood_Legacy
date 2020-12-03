@@ -49,29 +49,18 @@ public class Projectile : MonoBehaviour
         transform.position = Vector3.SmoothDamp(transform.position, posDest, ref speedProjectile, 1 / speed);
     }
 
-   /*  private void OnTriggerEnter2D(Collider2D other)
-    {
-        Destroy(gameObject);
-        print("Pegou");
-    }
+      private void OnTriggerEnter2D(Collider2D other)
+     {
+         Destroy(gameObject);
+     }
 
     private void OnTriggerStay2D(Collider2D other)
     {
-          Destroy(gameObject);
-        print("Pegou");
-    } */
+        Destroy(gameObject);
+    }
 
     private void OnTriggerExit2D(Collider2D other)
     {
-         Destroy(gameObject);
-        print("Pegou");
+        Destroy(gameObject);
     }
-
-
-
-
-
-
-
-
 }

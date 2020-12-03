@@ -5653,7 +5653,7 @@ MonoBehaviour:
     Space - Pula
 
 
-    C - Agaixa'
+    C - Slide'
 --- !u!222 &1129536680
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -10814,6 +10814,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvasAnim: {fileID: 1726089842}
   fade: {fileID: 805837512}
+  pressAnyKeyScene: 0
 --- !u!1 &2085577817
 GameObject:
   m_ObjectHideFlags: 0

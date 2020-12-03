@@ -435,7 +435,7 @@ public class Player25D : MonoBehaviour
 
     public void RecoverLife(float recovery)
     {
-        if (currentLife <= 100)
+        if (currentLife < 100)
         {
             currentLife += recovery;
             healthBarPistol.fillAmount += recovery / 100;

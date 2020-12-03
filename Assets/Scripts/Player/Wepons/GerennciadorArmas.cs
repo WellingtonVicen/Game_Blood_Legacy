@@ -31,21 +31,10 @@ public class GerennciadorArmas : MonoBehaviour
 
     public static GerennciadorArmas instance;
     public static GerennciadorArmas Instance { get { return Instance; } }
+    
     void Awake()
     {
         instance = this;
-    }
-
-    void Start()
-    {
-
-        print(player.isDead);
-
-    }
-    // Update is called once per frame
-    void Update()
-    {
-
     }
     void FixedUpdate()
     {

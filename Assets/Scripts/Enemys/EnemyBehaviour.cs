@@ -130,14 +130,20 @@ public class EnemyBehaviour : MonoBehaviour
 
     protected void Drop()
     {
-        if (numberP >= 3)
+        if (numberP > 3 || numberS > 3)
         {
 
             Instantiate(recoveryPickup, pointAttack.position, Quaternion.identity);
         }
-        else
+        else if (numberP < 3 || numberS < 3)
         {
             Instantiate(bulletPickup, pointAttack.position, Quaternion.identity);
+        }
+        else if (numberP == 3 || numberS == 3)
+        {
+              Instantiate(bulletPickup, pointAttack.position, Quaternion.identity);
+              Instantiate(recoveryPickup, pointWalkLeft.position, Quaternion.identity);
+
         }
     }
 
